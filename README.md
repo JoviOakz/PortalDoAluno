@@ -1,4 +1,7 @@
 # Projeto_YasJao
+
+Paleta de cores: https://color.adobe.com/pt/ProjetoWeb-color-theme-b869893f-142d-4e77-9cd8-a2c698d0a8f0
+
 	Importante:
  		Dividir as tarefas.
 		Realizar commits bem descritos e atribuido ao usuario correto.
