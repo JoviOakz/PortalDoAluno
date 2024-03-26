@@ -1,6 +1,7 @@
 # Projeto_YasJao
 
-
+	git config --global user.name "Nome"
+	git config --global user.email "Email"
 	
 	Precisa ter um repositório do git com os commits comentados com as funcionalidade, ex
 	"implementado a tela de cadastro".
