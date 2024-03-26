@@ -4,18 +4,13 @@
 		Realizar commits bem descritos e atribuido ao usuario correto.
 
 
-✔️ - Modelagem do banco de dados.
-❌ - Gestão de Usuário - sistema permitir o login do usuario, e garantir a segurança das informações.
-❌ - Autorização de Acessor por tipo de usuario.
-❌ - CRUD - Create, Read, Update, Delete.
-❌ - Validação de formulários - implemnetar validação de entradas para evitar entradas inválidas.
-❌ - Design Responsivo.
-❌ - Personalização do tema - dark mode, light mode.
-	
- 
- 
-
-
+	✔️ - Modelagem do banco de dados.
+	❌ - Gestão de Usuário - sistema permitir o login do usuario, e garantir a segurança das informações.
+	❌ - Autorização de Acessor por tipo de usuario.
+	❌ - CRUD - Create, Read, Update, Delete.
+	❌ - Validação de formulários - implemnetar validação de entradas para evitar entradas inválidas.
+	❌ - Design Responsivo.
+	❌ - Personalização do tema - dark mode, light mode.
 
 
 	git config --global user.name "Nome"
