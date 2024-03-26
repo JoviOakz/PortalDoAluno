@@ -1,0 +1,53 @@
+git init
+git clone <link gitHub, pasta local>
+git pull  
+git add .
+git commit -m "Testando"
+git push origin main
+
+git remote -v          # Encontrando link do repositorio no GitHub
+
+git status             # Situação atual de commit, branch e add
+git log -<-oneline / -graph / p)
+
+git branch             # Verificar branch atual, ou quantidade
+git switch desenvolvimento                 # Mudar de branch
+git checkout -b "Criando uma nova branch"
+git checkout <commit / branch>          # Mudar de commit ou branch
+git reset <commit>                      # Muda de commit e leva a branch junto
+
+git merge titulo       # Cria commit para juntar os outros
+git rebase titulo      # Coloca os commits da branch na master
+
+git stash              # Armazenar temporariamente
+git stash list         # Mostrar lista de itens armazenados
+git stash apply        # Aplica a mudança
+git stash drop         # Retira item da lista
+git stash pop < / 0 >  # Aplica e tira o item
+
+git diff                   # Diferença do código desde o último commit
+git diff <hash> <hash>     # Todas as mudanças entre os commits
+
+git tag                    # Lista todas as tags criadas
+git tag -a <nome> -m <Descrição>      # Criando a versão, um ponto
+git push origin V0.1.0     # Enviar tag para GitHub
+
+git cherry-pick <hash>   # Puxar determinado commit
+
+git rebase -i <HEAD~3 / hash>
+- Pick: Manter commit
+- s: Juntar commit
+
+
+
+# Reverter comandos no git
+git checkout --<file>    # Desfazer alterações salvas
+git reset HEAD <file>    # Retirar do add
+git revert <hash>        # Cria commit desfazendo o passado
+ 
+
+
+# Nomes
+ISSUES            # Reportar problema, sugerir melhoria, organização
+FORK              # Copiar repositório de outra pessoa para o seu
+PULL REQUEST      # Enviar uma sugestão (código) para merge
