@@ -1,0 +1,18 @@
+header{
+    min-height: 8vh;
+    background-color:  #0C9ABE;
+}
+nav{
+    width: 1920px;
+    padding: 0px 30px;
+}
+main{
+    min-height: 92vh;
+    background-color: rgb(247, 246, 246);
+}
+.logo{
+    width: 150px;
+}
+.navbar-nav{
+    color: white;
+}
