@@ -1,6 +1,7 @@
 // Importação
 const Sequelize = require('sequelize');
 const database = require('../config/db');
+
 const materia = require('./materia');
 
 // Criando a tabela Sala
