@@ -5,7 +5,7 @@
 }
 
 article {
-    height: 96vh;
+    height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -28,19 +28,6 @@ form {
     width: 25%;
     display: flex;
     flex-direction: column;
-}
-
-.perfil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.foto_perfil {
-    height: 100px;
-    width: 25%;
-    border-radius: 50%;
 }
 
 #flImage {
