@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    height: 96vh;
+    display: flex;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    padding: 1%;
+    background: linear-gradient(to bottom, rgb(238, 160, 160), rgb(99, 66, 99));
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+}
+
+.row {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto_perfil {
+    height: 100px;
+    width: 25%;
+    border-radius: 50%;
+}
+
+#flImage {
+    display: none;
+}
+
+.form-control {
+    width: 400px;
+}
+
+.form-select {
+    width: 400px;
+}
+
+.space {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: salmon;
+    border-color: brown;
+}
+
+.btn:hover {
+    background-color: rgb(238, 114, 100);
+    border-color: brown;
+}
