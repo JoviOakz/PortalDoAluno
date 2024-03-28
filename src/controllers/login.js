@@ -7,6 +7,7 @@ module.exports = {
 
         const login = req.body.loginn;
         const senha = req.body.senhaa;
+        let resultado = true;
 
         console.log(login);
 
@@ -16,10 +17,14 @@ module.exports = {
             where: { CPF: login, Senha:senha }
         });
 
-        const resultado =  pessoaEncontrada;
+        
 
         if(pessoaEncontrada){
             res.render('../views/home');
+        }
+        else{
+            resultado = false;
+            res.render('../views/login', {resultado});
         }
         
     }

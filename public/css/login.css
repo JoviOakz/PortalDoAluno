@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -40,10 +40,6 @@ form {
 
 .form-select {
     width: 400px;
-}
-
-.space {
-    margin-top: 20px;
 }
 
 .btn {
