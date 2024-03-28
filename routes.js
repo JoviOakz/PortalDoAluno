@@ -6,9 +6,9 @@ const route = express.Router();
 const home = require('./src/controllers/home');
 
 // Iniciando as rotas
-route.get('/', home.pagHome);
+route.get('/', home.pagLogin);
 
-route.get('/login', home.pagLogin);
+route.get('/home', home.pagHome);
 
 route.get('/grade-curricular', home.pagGradeCurricular);
 
