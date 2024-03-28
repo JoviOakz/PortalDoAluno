@@ -66,19 +66,20 @@
           <span class="material-symbols-outlined">menu</span>
         </li>
         <li class="nav-item justify-content-center">
-          <a href="/"><span class="material-symbols-outlined">newspaper</span></a>
+          <a href=""><span class="material-symbols-outlined">newspaper</span></a>
         </li>
         <li class="nav-item justify-content-center">
-          <a href="/grade-curricular"><span class="material-symbols-outlined">grid_view</span></a>
+          <span class="material-symbols-outlined">grid_view</span>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">school</span>
         </li>
         <li class="nav-item">
-          <span class="material-symbols-outlined">face_4</span>
+            <a href=""><span class="material-symbols-outlined">face_4</span></a>
+          
         </li>
         <li class="nav-item">
-          <a href="/boletos"><span class="material-symbols-outlined">request_quote</span></a>
+          <span class="material-symbols-outlined">request_quote</span>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">bookmark</span>
@@ -92,6 +93,21 @@
       </ul>
       <div class="triangulo-para-baixo"></div>
     </aside>
+
+    <article>
+        <form action="/" method="post"> 
+            <select class="form-select" onchange="this.form.submit()" name="nome" aria-label="Default select example" style="width: 220px;">
+              <option value="" >Selecione uma sala</option>
+              <!-- <% for (let i=0; i<salas.length; i++) { %>
+                <option value='<%= salas[i].IDSala %>' <%= id == salas[i].IDSala ? 'selected' : ''%>> <%= salas[i].Nome %> </option>
+              <% } %>    -->
+            </select>
+        </form>
+
+    </article>
+
+
+
   </main>
 
 
