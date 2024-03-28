@@ -8,7 +8,7 @@ const login = require('./src/controllers/login');
 
 // Iniciando as rotas
 route.get('/', home.pagLogin);
-// route.get('/', )
+
 route.post('/', login.verificarLogin);
 
 route.get('/home', home.pagHome);

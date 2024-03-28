@@ -17,7 +17,11 @@ const materia = database.define('Materia', {
         allowNull: false
     },
     Data: {
-        type: Sequelize.DATEONLY,
+        type: Sequelize.STRING(20),
+        allowNull: false
+    },
+    Descricao: {
+        type: Sequelize.STRING(255),
         allowNull: false
     }
 });
