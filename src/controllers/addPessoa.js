@@ -1,4 +1,7 @@
 const pessoa = require('../model/pessoa');
+const curso = require('../model/curso');
+const materia = require('../model/materia');
+const turma = require('../model/turma');
 
 async function adicionarPessoa(nome, cpf, dataNascimento, funcionario) {
     
@@ -21,3 +24,25 @@ async function adicionarPessoa(nome, cpf, dataNascimento, funcionario) {
 // adicionarPessoa('Rafaela Santos', '45678901234', '1999-02-12', false);
 // adicionarPessoa('Gustavo Pereira', '78901234567', '1990-11-30', false);
 // adicionarPessoa('Juliana Costa', '32109876543', '1984-05-08', false);
+
+
+
+async function adicionarCurso(nome, horas) {
+    
+    const cursoCriado = await curso.create({
+        Nome: nome,
+        HorasComplementares: horas
+    });
+}
+
+adicionarCurso('Engenharia de Software', 320);
+
+
+async function adicionarTurma(nome, periodo) {
+    
+    const cursoCriado = await curso.create({
+        Nome: nome,
+        HorasComplementares: horas
+    });
+}
+
