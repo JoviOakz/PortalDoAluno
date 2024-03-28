@@ -6,6 +6,6 @@ const route = express.Router();
 const home = require('./src/controllers/home');
 
 // Iniciando as rotas
-route.get('/', home.pagLogin);
+route.get('/', home.pagHome);
 
 module.exports = route;
