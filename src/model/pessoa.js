@@ -29,6 +29,10 @@ const pessoa = database.define('Pessoa', {
     Funcionario: {
         type: Sequelize.BOOLEAN,
         allowNull: false 
+    },
+    Senha: {
+        type: Sequelize.STRING(50),
+        allowNull: false
     }
 
 });

@@ -6,12 +6,13 @@ async function adicionarPessoa(nome, cpf, dataNascimento, funcionario) {
         Nome: nome,
         CPF: cpf,
         DataNascimento: dataNascimento,
-        Foto: 'img/default.png',
-        Funcionario: funcionario
+        Funcionario: funcionario,
+        Senha: 'senai123',
+        Foto: 'img/default.png'
     });
 }
 
-// adicionarPessoa('Maria Santos', '98765432109', '1988-10-20', false);
+//adicionarPessoa('Maria Santos', '98765432109', '1988-10-20', false);
 // adicionarPessoa('Pedro Oliveira', '45678912302', '1995-03-25', true);
 // adicionarPessoa('Ana Souza', '78901234567', '1992-07-08', false);
 // adicionarPessoa('Lucas Pereira', '32109876543', '1985-12-12', false);
