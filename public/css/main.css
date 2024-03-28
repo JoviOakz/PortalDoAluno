@@ -1,20 +1,28 @@
-.barra-esquerda{
+.barra-esquerda {
     background-color: #fccd4e;
-    max-width: 100px;
+    max-width: 80px;
 
-       
+
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     color: #bb6c04;
-    font-size: 50px;
+    font-size: 40px;
     background-color: #fdc322;
     border-radius: 50px;
     padding: 7px;
     cursor: pointer;
 }
 
-.ponta{
-    width: 100px;
-    
+.ponta {
+    width: 80px;
+
+}
+
+.triangulo-para-baixo {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 25px solid #fccd4e;
 }
