@@ -1,8 +1,10 @@
+.container{
+    width: 10%;
+}
+
 .barra-esquerda {
     background-color: #fccd4e;
     max-width: 80px;
-
-
 }
 
 .material-symbols-outlined {
@@ -16,7 +18,6 @@
 
 .ponta {
     width: 80px;
-
 }
 
 .triangulo-para-baixo {
