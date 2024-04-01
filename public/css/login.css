@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+main {
+    background-color: #48BEE6;
+}
+
 article {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
 }
@@ -18,10 +22,9 @@ section {
 
 form {
     padding: 1%;
-    background: linear-gradient(to bottom, rgb(238, 160, 160), rgb(99, 66, 99));
-    border-style: solid;
-    border-color: black;
-    border-radius: 15px;
+    background-color: #ffcc8a;
+    border: 2px solid #cf7e13;
+    border-radius: 10px;
 }
 
 .row {
@@ -43,11 +46,11 @@ form {
 }
 
 .btn {
-    background-color: salmon;
-    border-color: brown;
+    background-color: #f08f11;
+    border-color: #cf7e13;
 }
 
 .btn:hover {
-    background-color: rgb(238, 114, 100);
-    border-color: brown;
+    background-color: #cf7e13;
+    border-color: #cf7e13;
 }

@@ -14,22 +14,31 @@
         crossorigin="anonymous"></script>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
 
 </head>
 
 <body>
-    <header>
-
+    <header class="d-flex align-items-center justify-content-center" style="background-color: #0C9ABE;">
+        <nav class="navbar navbar-expand-lg poppins-bold">
+            <div class="container-fluid ">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <img class="logo" src="img/logo.png">
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <article>
             <section>
-                <form class="row g-3 needs-validation" action="/" method="post" >
-                    <a href="/home"><h2>Portal do Aluno</h2></a>
+                <form class="row g-3 needs-validation" action="/" method="post">
+                    <a href="/home">
+                        <h2>Portal do Aluno</h2>
+                    </a>
                     <div class="col-md-4">
-                        <label for="validationCustom01"  class="form-label">Usuário</label>
+                        <label for="validationCustom01" class="form-label">Usuário</label>
                         <input type="text" name="loginn" class="form-control" id="validationCustom01" required>
                     </div>
                     <div class="col-md-4">
@@ -38,18 +47,14 @@
                     </div>
                     <div class="col-12 d-flex gap-5 align-items-center pt-2">
                         <button class="btn btn-primary " type="post"><b>Acessar</b></button>
-                        <h5 cla style="color: rgb(255, 67, 67);"><%= resultado == false ? 'Senha ou login incorreto!' : ''%></h5>
+                        <h5 cla style="color: rgb(255, 67, 67);">
+                            <%= resultado==false ? 'Senha ou login incorreto!' : '' %>
+                        </h5>
                     </div>
-                    
-                    
                 </form>
             </section>
         </article>
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 
 </html>
