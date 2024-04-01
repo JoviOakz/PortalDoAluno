@@ -16,6 +16,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <!-- JAVASCRIPT -->
+    <script defer src="js/switch_dark_mode.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/aside.css">
@@ -28,6 +31,12 @@
         <nav class="navbar navbar-expand-lg poppins-bold">
             <div class="container-fluid ">
                 <img class="logo" src="img/logo.png">
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="colorSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list"
@@ -97,47 +106,83 @@
 
             <section>
                 <div class="row row-cols-1 row-cols-md-3 g-4 m-0">
-                    <div class="col card_style">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
+                    <div class="col card_style d-flex justify-content-center">
+                        <div class="card" style="width: 16rem;">
+                            <div class="card-details">
+                                <h5 class="text-title">Parcela: 1</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><b>Valor: R$685,17</b></h6>
+                                <p class="text-body"><b>Data de vencimento: </b>5 de jan de 2024</p>
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/c/c7/BoletoBancario.png"
+                                    target="_blank"
+                                    class="card-button d-flex justify-content-center align-items-center gap-1"
+                                    style="text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-file-earmark-text"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                        <path
+                                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                    </svg>Boleto</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col card_style">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
+                    <div class="col card_style d-flex justify-content-center">
+                        <div class="card" style="width: 16rem;">
+                            <div class="card-details">
+                                <h5 class="text-title">Parcela: 2</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><b>Valor: R$685,17</b></h6>
+                                <p class="text-body"><b>Data de vencimento: </b>5 de fev de 2024</p>
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/c/c7/BoletoBancario.png"
+                                    target="_blank"
+                                    class="card-button d-flex justify-content-center align-items-center gap-1"
+                                    style="text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-file-earmark-text"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                        <path
+                                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                    </svg>Boleto</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col card_style">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
+                    <div class="col card_style d-flex justify-content-center">
+                        <div class="card" style="width: 16rem;">
+                            <div class="card-details">
+                                <h5 class="text-title">Parcela: 3</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><b>Valor: R$685,17</b></h6>
+                                <p class="text-body"><b>Data de vencimento: </b>5 de mar de 2024</p>
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/c/c7/BoletoBancario.png"
+                                    target="_blank"
+                                    class="card-button d-flex justify-content-center align-items-center gap-1"
+                                    style="text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-file-earmark-text"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                        <path
+                                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                    </svg>Boleto</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col card_style">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
+                    <div class="col card_style d-flex justify-content-center">
+                        <div class="card" style="width: 16rem;">
+                            <div class="card-details">
+                                <h5 class="text-title">Parcela: 4</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><b>Valor: R$685,17</b></h6>
+                                <p class="text-body"><b>Data de vencimento: </b>5 de abr de 2024</p>
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/c/c7/BoletoBancario.png"
+                                    target="_blank"
+                                    class="card-button d-flex justify-content-center align-items-center gap-1"
+                                    style="text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-file-earmark-text"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                        <path
+                                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                    </svg>Boleto</a>
                             </div>
                         </div>
                     </div>
