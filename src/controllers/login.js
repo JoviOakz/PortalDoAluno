@@ -13,14 +13,14 @@ module.exports = {
 
         const pessoaEncontrada = await pessoa.findOne({
             raw: true,
-            attributes: ['CPF', 'Senha'],
+            attributes: ['Nome','CPF', 'Senha', 'IDPessoa'],
             where: { CPF: login, Senha:senha }
         });
 
         
 
         if(pessoaEncontrada){
-            res.render('../views/home');
+            res.render('../views/home', {pessoaEncontrada});
         }
         else{
             resultado = false;

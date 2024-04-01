@@ -13,7 +13,7 @@ const materia = database.define('Materia', {
         primaryKey: true
     },
     Nome: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(100),
         allowNull: false
     },
     Data: {
