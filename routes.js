@@ -8,8 +8,9 @@ const login = require('./src/controllers/login');
 
 // Iniciando as rotas
 route.get('/', home.pagLogin);
-
 route.post('/', login.verificarLogin);
+
+route.get('/selecionar-matricula', login.selecionarCurso);
 
 route.get('/home', home.pagHome);
 

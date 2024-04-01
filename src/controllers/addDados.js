@@ -2,6 +2,7 @@ const pessoa = require('../model/pessoa');
 const curso = require('../model/curso');
 const materia = require('../model/materia');
 const turma = require('../model/turma');
+const matricula = require('../model/matricula');
 
 
 async function adicionarPessoa(nome, cpf, dataNascimento, funcionario) {
@@ -38,6 +39,7 @@ async function adicionarCurso(nome, horas) {
 }
 
 adicionarCurso('Engenharia de Software', 320);
+adicionarCurso('Desinvolvimento de Sistemas', 220);
 
 
 async function adicionarTurma(nome, periodo) {
@@ -78,4 +80,14 @@ adicionarMateria('Jornada de Aprendizagem - Inovação e às Necessidades da Soc
 adicionarMateria('Matemática Discreta e Finita', 'Quinta', 'Estudo de estruturas matemáticas discretas, como conjuntos, lógica proposicional e teoria dos grafos, fundamentais para a computação e a resolução de problemas complexos.', 1);
 
 
+async function adicionarMatricula(pessoa, curso, turma) {
+    const matriculaCriada = await matricula.create({
+        IDPessoa: pessoa,
+        IDCurso: curso,
+        IDTurma: turma
+    });
+}
+
+adicionarMatricula(5, 1, 3)
+adicionarMatricula(5, 2, 1)
 
