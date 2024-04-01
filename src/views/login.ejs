@@ -13,6 +13,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <!-- JAVASCRIPT -->
+    <script defer src="js/switch_dark_mode.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
@@ -20,7 +23,7 @@
 </head>
 
 <body>
-    <header class="d-flex align-items-center justify-content-center" style="background-color: #0C9ABE;">
+    <header class="d-flex align-items-center justify-content-center">
         <nav class="navbar navbar-expand-lg poppins-bold">
             <div class="container-fluid ">
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -43,15 +46,23 @@
                     </div>
                     <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Senha</label>
-                        <input type="password" name="senhaa" value="" class="form-control" id="validationCustom02" required>
+                        <input type="password" name="senhaa" value="" class="form-control" id="validationCustom02"
+                            required>
                     </div>
                     <div class="col-12 d-flex gap-5 align-items-center pt-2">
                         <button class="btn btn-primary " type="post"><b>Acessar</b></button>
-                        <h5 cla style="color: rgb(255, 67, 67);">
+                        <h5 cla id="error">
                             <%= resultado==false ? 'Senha ou login incorreto!' : '' %>
                         </h5>
                     </div>
                 </form>
+
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="colorSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </section>
         </article>
     </main>

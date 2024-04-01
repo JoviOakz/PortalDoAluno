@@ -3,7 +3,7 @@ const pessoa = require('../model/pessoa');
 
 module.exports = {
 
-    async verificarLogin(req, res){
+    async verificarLogin(req, res) {
 
         const login = req.body.loginn;
         const senha = req.body.senhaa;
@@ -13,22 +13,18 @@ module.exports = {
 
         const pessoaEncontrada = await pessoa.findOne({
             raw: true,
-            attributes: ['Nome','CPF', 'Senha', 'IDPessoa'],
-            where: { CPF: login, Senha:senha }
+            attributes: ['Nome', 'CPF', 'Senha', 'IDPessoa'],
+            where: { CPF: login, Senha: senha }
         });
 
-        
 
-        if(pessoaEncontrada){
-            res.render('../views/home', {pessoaEncontrada});
+
+        if (pessoaEncontrada) {
+            res.render('../views/home', { pessoaEncontrada });
         }
-        else{
+        else {
             resultado = false;
-            res.render('../views/login', {resultado});
+            res.render('../views/login', { resultado });
         }
-        
     }
-
-
-
 }
