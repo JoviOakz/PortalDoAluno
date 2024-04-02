@@ -15,7 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/matricula.css">
 
 </head>
 
@@ -30,31 +30,29 @@
         </nav>
     </header>
 
-    <main>
-        <article>
-            <section class="d-flex flex-column justify-content-center align-items-center">
-                <h5 name="aluno" value='<%=pessoaEncontrada.IDPessoa%>' >Aluno</h5>
+    <main class="d-flex flex-column justify-content-center align-items-center">
+        <article class="d-flex flex-column justify-content-center align-items-center gap-3">
+                <h5 class="nome-aluno poppins" name="aluno">Aluno <b><%=nome%></b></h5>
                 <% for(let i = 0; i< matriculasEncontradas.length; i++) {%>
 
-                <div class="card mb-3" style="width: 18rem;">
+                <div class="card mb-3" style="width: 30rem;">
 
-                    <div class="card-body d-flex align-items-center gap-2">
+                    <div class="card-body d-flex align-items-center">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1"></label>
-                        </div>
-
-                        <div>
-                            <h4><%= matriculasEncontradas[i].IDCurso  %></h4>
-                            <h4><%= matriculasEncontradas[i].NomeCurso  %></h4>
-                            <h4><%= matriculasEncontradas[i].PeriodoTurma  %></h4>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                <h4 class="texto-caixa">ID: <%= matriculasEncontradas[i].IDCurso%></h4>
+                                <h4 class="texto-caixa">Curso: <%= matriculasEncontradas[i].NomeCurso%></h4>
+                                <h4 class="texto-caixa"><%= matriculasEncontradas[i].PeriodoTurma%>° Periodo</h4>
+                            </label>
+                            
                         </div>
                        
                     </div>
 
                 </div>
                 <% }%>
-            </section>
+           
         </article>
     </main>
 </body>
