@@ -32,11 +32,11 @@
 
     <main class="d-flex flex-column justify-content-center align-items-center">
         <article class="d-flex flex-column justify-content-center align-items-center gap-3">
-            <h5 class="nome-aluno poppins" name="aluno">Aluno(a) <b>
+            <h5 class="nome-aluno poppins" name="aluno">Professor(a) <b>
                     <%=nome%>
                 </b></h5>
-            <% if(matriculasEncontradas.length> 0) {%>
-                <% for(let i=0; i< matriculasEncontradas.length; i++) {%>
+            <% if(materiasEncontradas.length> 0) {%>
+                <% for(let i=0; i< materiasEncontradas.length; i++) {%>
 
                     <div class="card mb-3" style="width: 30rem;">
 
@@ -45,9 +45,8 @@
                                 <input class="form-check-input" type="radio" name="flexRadioDefault"
                                     id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
-                                    ID: <%= matriculasEncontradas[i].IDCurso%> <br>
-                                    Curso: <%= matriculasEncontradas[i].NomeCurso%> <br>
-                                    <%= matriculasEncontradas[i].PeriodoTurma%>° Periodo
+                                    Materia: <%= materiasEncontradas[i].Nome%> <br>
+                                        <%= materiasEncontradas[i].Data%> - feira
                                     
                                 </label>
 
@@ -58,7 +57,7 @@
                     </div>
                 <% }%>
             <% } else {%>
-                <h4 class="texto-caixa">Nenhuma matrícula encontrada</h4>
+                <h4 class="texto-caixa">Nenhuma materia encontrada</h4>
             <% } %>
 
         </article>

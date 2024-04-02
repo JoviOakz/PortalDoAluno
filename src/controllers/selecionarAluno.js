@@ -46,5 +46,4 @@ module.exports = {
         
         res.render('../views/matricula', { pessoaEncontrada:  { IDPessoa: aluno }, nome, matriculasEncontradas: matriculasCompletas});
     }
-    
 }

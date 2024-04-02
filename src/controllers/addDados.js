@@ -90,4 +90,3 @@ async function adicionarMatricula(pessoa, curso, turma) {
 
 adicionarMatricula(5, 1, 3)
 adicionarMatricula(5, 2, 1)
-

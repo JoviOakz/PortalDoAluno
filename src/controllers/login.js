@@ -17,7 +17,7 @@ module.exports = {
 
         if(pessoaEncontrada){
             if(funcionario){
-                
+                res.redirect(`/selecionar-materia?idProfessor=${pessoaEncontrada.IDPessoa}&nomeProfessor=${pessoaEncontrada.Nome}`);
             }
             else{
                 res.redirect(`/selecionar-matricula?idAluno=${pessoaEncontrada.IDPessoa}&nomeAluno=${pessoaEncontrada.Nome}`);
