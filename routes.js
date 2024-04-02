@@ -5,16 +5,14 @@ const route = express.Router();
 // Importando os Controllers
 const home = require('./src/controllers/home');
 const login = require('./src/controllers/login');
-const selecionarAluno  = require('./src/controllers/selecionarAluno');
-const selecionarProfessor = require('./src/controllers/selecionarProfessor');
+const selecionar  = require('./src/controllers/selecionar');
+
 
 // Iniciando as rotas
 route.get('/', home.pagLogin);
 route.post('/', login.verificarLogin);
 
-route.get('/selecionar-matricula', selecionarAluno.selecionarCurso);
-
-route.get('/selecionar-materia', selecionarProfessor.selecionarMateria);
+route.get('/selecionar', selecionar.selecionar);
 
 route.get('/home', home.pagHome);
 
