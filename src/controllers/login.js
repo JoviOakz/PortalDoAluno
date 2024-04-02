@@ -9,13 +9,19 @@ module.exports = {
 
         const pessoaEncontrada = await pessoa.findOne({
             raw: true,
-            attributes: ['Nome', 'CPF', 'Senha', 'IDPessoa'],
+            attributes: ['Nome', 'CPF', 'Senha', 'IDPessoa', 'Funcionario'],
             where: { CPF: login, Senha: senha }
         });
 
-        if(pessoaEncontrada){
-            res.redirect(`/selecionar-matricula?idAluno=${pessoaEncontrada.IDPessoa}&nomeAluno=${pessoaEncontrada.Nome}`);
+        let funcionario = pessoaEncontrada.Funcionario
 
+        if(pessoaEncontrada){
+            if(funcionario){
+                
+            }
+            else{
+                res.redirect(`/selecionar-matricula?idAluno=${pessoaEncontrada.IDPessoa}&nomeAluno=${pessoaEncontrada.Nome}`);
+            }
         }
         else {
             resultado = false;
