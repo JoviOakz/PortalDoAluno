@@ -1,11 +1,11 @@
 {
   "name": "projeto_yasjao",
   "version": "1.0.0",
-  "description": "git config --global user.name \"Nome\"\r \tgit config --global user.email \"Email\"",
+  "description": "Paleta de cores: https://color.adobe.com/pt/ProjetoWeb-color-theme-b869893f-142d-4e77-9cd8-a2c698d0a8f0",
   "main": "routes.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
