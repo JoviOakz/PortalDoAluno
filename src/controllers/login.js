@@ -13,9 +13,9 @@ module.exports = {
             where: { CPF: login, Senha: senha }
         });
 
-        let funcionario = pessoaEncontrada.Funcionario
-
         if(pessoaEncontrada){
+            let funcionario = pessoaEncontrada.Funcionario
+            
             if(funcionario){
                 res.redirect(`/selecionar-materia?idProfessor=${pessoaEncontrada.IDPessoa}&nomeProfessor=${pessoaEncontrada.Nome}`);
             }
