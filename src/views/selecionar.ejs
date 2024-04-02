@@ -41,13 +41,11 @@
 
                             <div class="card-body d-flex align-items-center">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        ID: <%= matriculasEncontradas[i].IDCurso%> <br>
-                                        Curso: <%= matriculasEncontradas[i].NomeCurso%> <br>
-                                        <%= matriculasEncontradas[i].PeriodoTurma%>° Periodo
-                                        
+                                    <input class="form-check-input" value='<%=matriculasEncontradas[i].IDCurso%>' type="radio" name="flexRadioDefault" id="flexRadioDefault<%= i + 1 %>">
+                                    <label class="form-check-label" for="flexRadioDefault<%= i + 1 %>">
+                                        ID: <%= matriculasEncontradas[i].IDCurso %> <br>
+                                        Curso: <%= matriculasEncontradas[i].NomeCurso %> <br>
+                                        <%= matriculasEncontradas[i].PeriodoTurma %>° Período
                                     </label>
 
                                 </div>
@@ -67,11 +65,10 @@
     
                             <div class="card-body d-flex align-items-center">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" value='<%=materiasEncontradas[i].IDMateria%>' name="flexRadioDefault" type="radio" id="flexRadioDefault<%= i + 1 %>" >
+                                    <label class="form-check-label" for="flexRadioDefault<%= i + 1 %>">
                                         Materia: <%= materiasEncontradas[i].Nome%> <br>
-                                            <%= materiasEncontradas[i].Data%> - feira
+                                            <%= materiasEncontradas[i].Data%>-feira
                                         
                                     </label>
     

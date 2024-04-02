@@ -18,7 +18,7 @@ module.exports = {
 
             const materiasEncontradas = await materia.findAll({
             raw: true,
-            attributes: ['Nome', 'Data'],
+            attributes: ['IDMateria','Nome', 'Data'],
             where: { IDPessoa: id }
             });
             console.log('FUNCIONARIO')
