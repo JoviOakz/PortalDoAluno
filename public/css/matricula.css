@@ -1,32 +1,22 @@
 :root {
     --main_bg_color: #48BEE6;
-    --form_bg_color: #ffcc8a;
-    --form_border_color: #cf7e13;
-    --btn_bg_color: #f08f11;
-    --btn_press_color: #cf7e13;
-    --error_color: #ff0000;
 }
 
 .dark-mode {
-    --main_bg_color: hsl(192, 68%, 30%);
-    --form_bg_color: #c5985d;
-    --form_border_color: #ad6a11;
-    --btn_bg_color: #cc7a10;
-    --btn_press_color: #a8660f;
-    --error_color: #9b0000;
+    --main_bg_color: #2e2c2c;
 }
 
 
-.card{
+.card {
     width: 500px;
 }
 
-.texto-caixa{
+.texto-caixa {
     font-size: 20px;
 }
 
-.nome-aluno{
+.nome-aluno {
     background-color: #ffcc8a;
-    padding: 5px 20px; 
+    padding: 5px 20px;
     border-radius: 40px;
 }
