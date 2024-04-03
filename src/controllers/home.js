@@ -10,5 +10,8 @@ module.exports = {
     },
     async pagBoletos(req, res) {
         res.render('../views/boletos');
+    },
+    async pagPerfil(req, res) {
+        res.render('../views/perfil');
     }
 }

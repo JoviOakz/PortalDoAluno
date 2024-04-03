@@ -22,4 +22,6 @@ route.get('/grade-curricular', home.pagGradeCurricular);
 
 route.get('/boletos', home.pagBoletos);
 
+route.get('/perfil', home.pagPerfil);
+
 module.exports = route;
