@@ -35,10 +35,10 @@
 
     <main class="d-flex flex-column justify-content-center align-items-center">
         <article class="d-flex flex-column justify-content-center align-items-center gap-3">
-            <h5 class="nome-aluno poppins" name="aluno"><% if(funcionario == 'false') { %>Aluno(a)<b><%=nome%></b><% } else { %>Professor(a)<b><%=nome%></b><% } %></b></h5>
+            <h5 class="nome-aluno poppins" name="aluno"><% if(funcionario == '0') { %>Aluno(a)<b><%=nome%></b><% } else { %>Professor(a)<b><%=nome%></b><% } %></b></h5>
 
             <form action="/selecionar" method="post">
-                <%if(funcionario == 'false'){%>
+                <%if(funcionario == '0'){%>
                     <% if(matriculasEncontradas.length> 0) {%>
                         <% for(let i=0; i< matriculasEncontradas.length; i++) {%>
                             <div class="card mb-3" style="width: 30rem;">
@@ -59,7 +59,7 @@
                     <% } else {%>
                         <h4 class="texto-caixa">Nenhuma matrícula encontrada</h4>
                     <% } %>
-                <% } else if (funcionario == 'true'){%>
+                <% } else if (funcionario == '1'){%>
                     <% if(materiasEncontradas.length> 0) {%>
                         <% for(let i=0; i< materiasEncontradas.length; i++) {%>
         

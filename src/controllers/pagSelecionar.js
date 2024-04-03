@@ -16,7 +16,7 @@ module.exports = {
         const matriculasCompletas = [];
         
 
-        if(funcionario == 'true'){
+        if(funcionario == '1'){
 
             const materiasEncontradas = await materia.findAll({
             raw: true,
@@ -26,7 +26,7 @@ module.exports = {
             console.log('FUNCIONARIO')
             res.render('../views/selecionar', { pessoaEncontrada:  { IDPessoa: id }, materiasEncontradas, nome, funcionario});
         }
-        else{
+        else if(funcionario == '0'){
             
             const matriculasEncontradas = await matricula.findAll({
                 raw: true,
