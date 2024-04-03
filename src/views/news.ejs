@@ -19,6 +19,7 @@
 
   <!-- JAVASCRIPT -->
   <script defer src="js/switch_dark_mode.js"></script>
+  <script defer src="js/const_pessoa.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/header.css">
@@ -49,10 +50,14 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav pe-5 fs-6">
             <li class="pe-5 nav-item pe-2  d-flex align-items-center ">
-              <h5 class="fs-6 m-0">Eng. de Software</h5>
+              <h5 class="fs-6 m-0" id="const-curso" value="<%=encontrarMatricula.IDMatricula%>">
+                <%= cursoEncontrado.Nome %>
+              </h5>
             </li>
             <li class="pe-5 nav-item ms-1 pe-1  d-flex align-items-center">
-              <h5 class="fs-6 m-0">Yasmin Trembulack</h5>
+              <h5 class="fs-6 m-0" id="const-nome" value="<%=encontrarPessoa.IDPessoa%>">
+                <%= encontrarPessoa.Nome %>
+              </h5>
             </li>
             <li class="nav-item ps-1">
               <a href="/perfil">
@@ -69,7 +74,7 @@
       </div>
     </nav>
   </header>
-  
+
   <main>
     <aside class="container" style="float: left;">
       <ul class="barra-esquerda nav flex-column align-items-center pt-3 gap-3">

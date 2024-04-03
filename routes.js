@@ -6,6 +6,7 @@ const route = express.Router();
 const home = require('./src/controllers/home');
 const login = require('./src/controllers/login');
 const pagSelecionar  = require('./src/controllers/pagSelecionar');
+const controllerNews = require('./src/controllers/news')
 
 
 // Iniciando as rotas
@@ -15,7 +16,7 @@ route.post('/', login.verificarLogin);
 route.get('/selecionar', pagSelecionar.selecionar);
 route.post('/selecionar', pagSelecionar.selecionado);
 
-route.get('/news', home.pagNews);
+route.get('/news', controllerNews.dados);
 
 route.get('/grade-curricular', home.pagGradeCurricular);
 

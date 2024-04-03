@@ -1,7 +1,4 @@
 module.exports = {
-    async pagNews(req, res) {
-        res.render('../views/news');
-    },
     async pagLogin(req, res) {
         res.render('../views/login', {resultado: true});
     },
