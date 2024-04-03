@@ -6,6 +6,7 @@ module.exports = {
 
         const login = req.body.loginn;
         const senha = req.body.senhaa;
+        let resultado
 
         const pessoaEncontrada = await pessoa.findOne({
             raw: true,
@@ -14,19 +15,12 @@ module.exports = {
         });
 
         if(pessoaEncontrada){
-            let funcionario = pessoaEncontrada.Funcionario
-            
-            if(funcionario){
-                res.redirect(`/selecionar-materia?idProfessor=${pessoaEncontrada.IDPessoa}&nomeProfessor=${pessoaEncontrada.Nome}`);
-            }
-            else{
-                res.redirect(`/selecionar-matricula?idAluno=${pessoaEncontrada.IDPessoa}&nomeAluno=${pessoaEncontrada.Nome}`);
-            }
+            resultado = true;
+            res.redirect(`/selecionar?idPessoa=${pessoaEncontrada.IDPessoa}&nomePessoa=${pessoaEncontrada.Nome}&funcionario=${pessoaEncontrada.Funcionario}`);  
         }
         else {
             resultado = false;
-            res.render('../views/login', { resultado});
+            res.render('../views/login', {resultado});
         }
-        
     }
 }
