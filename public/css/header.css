@@ -19,6 +19,7 @@
 header {
     min-height: 8vh;
     background-color: var(--hd_color);
+    transition: .4s ease-in-out;
 }
 
 nav {
