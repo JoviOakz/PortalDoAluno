@@ -14,21 +14,13 @@ module.exports = {
             where: { CPF: login, Senha: senha }
         });
 
-        
-
         if(pessoaEncontrada){
             resultado = true;
-
-            
-            res.redirect(`/selecionar?idPessoa=${pessoaEncontrada.IDPessoa}&nomePessoa=${pessoaEncontrada.Nome}&funcionario=${pessoaEncontrada.Funcionario}`);
-            
-            
+            res.redirect(`/selecionar?idPessoa=${pessoaEncontrada.IDPessoa}&nomePessoa=${pessoaEncontrada.Nome}&funcionario=${pessoaEncontrada.Funcionario}`);  
         }
         else {
-            
             resultado = false;
             res.render('../views/login', {resultado});
         }
-        
     }
 }

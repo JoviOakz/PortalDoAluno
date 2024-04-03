@@ -2,6 +2,8 @@ const matricula = require('../model/matricula');
 const curso = require('../model/curso');
 const turma = require('../model/turma');
 const materia = require('../model/materia');
+const pessoa = require('../model/pessoa');
+
 
 module.exports = {
 
@@ -12,7 +14,7 @@ module.exports = {
 
         console.log(funcionario);
         const matriculasCompletas = [];
-        let materiasEncontradas = [];
+        
 
         if(funcionario == 'true'){
 
@@ -23,13 +25,12 @@ module.exports = {
             });
             console.log('FUNCIONARIO')
             res.render('../views/selecionar', { pessoaEncontrada:  { IDPessoa: id }, materiasEncontradas, nome, funcionario});
-
         }
         else{
             
             const matriculasEncontradas = await matricula.findAll({
                 raw: true,
-                attributes: ['IDCurso', 'IDTurma'],
+                attributes: ['IDMatricula','IDCurso', 'IDTurma'],
                 where: { IDPessoa: id }
             });
 
@@ -47,6 +48,7 @@ module.exports = {
                 });
 
                 const matriculaCompleta = {
+                    IDMatricula: matricula.IDMatricula,
                     IDCurso: matricula.IDCurso,
                     IDTurma: matricula.IDTurma,
                     NomeCurso: cursoEncontrado ? cursoEncontrado.Nome : 'Curso não encontrado',
@@ -59,5 +61,18 @@ module.exports = {
             res.render('../views/selecionar', { pessoaEncontrada:  { IDPessoa: id }, nome, matriculasEncontradas: matriculasCompletas, funcionario});
 
         }
+    },
+
+
+    async selecionado(req, res){
+
+        const idSelecionado = req.body.flexRadioDefault; // Obtém o valor do botão de rádio selecionado
+        const valores = idSelecionado.split('='); // Divide o valor em partes usando o caractere '='
+    
+        const idMatricula = valores[0]; // O primeiro valor é o ID da matrícula ou da matéria
+        const idPessoa = valores[1]; // O segundo valor é o ID da pessoa
+        const funcionario = valores[2]; // O terceiro valor é a informação sobre se é funcionário     
+
+        res.redirect(`/news?idPessoa=${idPessoa}&selecionado=${idMatricula}&funcionario=${funcionario}`);  
     }
 }
