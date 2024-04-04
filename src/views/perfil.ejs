@@ -19,6 +19,13 @@
 
   <!-- JAVASCRIPT -->
   <script defer src="js/switch_dark_mode.js"></script>
+  <script defer src="js/editarTexto.js"></script>
+  
+  <!-- <div id="texto-editavel">
+    Este texto não pode ser editado pelo usuário até clicar no botão abaixo.
+  </div>
+
+  <button id="botao-editar">Editar Texto</button> -->
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/header.css">
@@ -65,7 +72,8 @@
               </h5>
             </li>
             <li class="nav-item ps-1">
-              <a href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
+              <a
+                href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white" class="bi bi-person-circle"
                   viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -87,10 +95,14 @@
           <span class="material-symbols-outlined">menu</span>
         </li>
         <li class="nav-item justify-content-center">
-          <a href="/news?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=news"><span class="material-symbols-outlined">newspaper</span></a>
+          <a
+            href="/news?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=news"><span
+              class="material-symbols-outlined">newspaper</span></a>
         </li>
         <li class="nav-item justify-content-center">
-          <a href="/gradeCurricular?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=gradeCurricular"><span class="material-symbols-outlined">grid_view</span></a>
+          <a
+            href="/gradeCurricular?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=gradeCurricular"><span
+              class="material-symbols-outlined">grid_view</span></a>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">school</span>
@@ -99,7 +111,9 @@
           <span class="material-symbols-outlined">face_4</span>
         </li>
         <li class="nav-item">
-          <a href="/boletos?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=boletos"><span class="material-symbols-outlined">request_quote</span></a>
+          <a
+            href="/boletos?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=boletos"><span
+              class="material-symbols-outlined">request_quote</span></a>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">bookmark</span>
@@ -117,28 +131,14 @@
     <article>
       <h1 class="mt-5">Nome da pessoa</h1>
 
-      <section class="mt-5">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="img/logo_senai.png" class="img-fluid rounded-start">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </section>
+      <div id="texto-editavel">
+        Este texto não pode ser editado pelo usuário até clicar no botão abaixo.
+      </div>
+
+      <button id="botao-editar">Editar Texto</button>
+
+
     </article>
   </main>
 </body>

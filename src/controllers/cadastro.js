@@ -31,9 +31,6 @@ module.exports = {
             Pai: dados.pai
         });
         // Redirecionar para a página principal
-
         res.redirect('/selecaoCadastro');
     }
-
-
 }
