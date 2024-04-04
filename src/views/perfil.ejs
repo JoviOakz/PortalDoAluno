@@ -129,10 +129,12 @@
     </aside>
 
     <article>
-      <h1 class="mt-5">Nome da pessoa</h1>
+      <h1 class="mt-5">
+        <%=encontrarPessoa.Nome %>
+      </h1>
 
       <section class="mt-5">
-        <div class="card mb-3">
+        <div class="card mb-3" style="width: 100%; background-color: rgb(214, 220, 228);">
           <div class="row g-0">
             <div class="col-md-4">
               <img src="img/logo_senai.png" class="img-fluid rounded-start">
@@ -148,15 +150,90 @@
         </div>
       </section>
 
-      <section>
-        <div class="card">
+      <section class="gap-3" style="flex-direction: column;">
+        <div class="card" style="width: 100%;">
           <div class="card-body">
-            This is some text within a card body.
+            <h4>Identificação</h4>
+            <hr>
+
+            <div class="d-flex">
+              <div style="width: 100%;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>Data de nascimento:</b>
+                    <%=encontrarPessoa.DataNascimento %>
+                  </li>
+                  <li class="list-group-item"><b>Estado:</b>
+                    <%=encontrarPessoa.Estado %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h4>Filiação</h4>
+            <hr>
+
+            <div class="d-flex">
+              <div style="width: 48%;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Nome</h5>
+                  </li>
+                </ul>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <%=encontrarPessoa.Mae %>
+                  </li>
+                  <li class="list-group-item">
+                    <%=encontrarPessoa.Pai %>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="width: 48%; margin-left: 70px;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Tipo de relacionamento</h5>
+                  </li>
+                </ul>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Mãe</li>
+                  <li class="list-group-item">Pai</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h5>Contato</h5>
+            <hr>
+            Nome da mãe
+            <br>
+            Nome do pai
+          </div>
+        </div>
+
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h5>Endereço</h5>
+            <hr>
+            Nome da mãe
+            <br>
+            Nome do pai
           </div>
         </div>
       </section>
     </article>
   </main>
+
+  <footer style="height: 60px;"></footer>
 </body>
 
 </html>
