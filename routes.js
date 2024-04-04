@@ -24,4 +24,7 @@ route.get('/boletos', controllerDados.dados);
 
 route.get('/perfil', controllerDados.dados);
 
+route.get('/formsCadastro', home.pagFormsCadastro);
+
+
 module.exports = route;

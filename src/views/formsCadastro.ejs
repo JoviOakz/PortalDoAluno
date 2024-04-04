@@ -18,7 +18,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/forms.css">
 
 </head>
 
@@ -40,30 +40,128 @@
     </header>
 
     <main>
-        <article>
-            <section>
-                <form class="row g-3 needs-validation shadow" action="/" method="post">
-                    <a href="/news?idPessoa=3&selecionado=1&funcionario=0&pagina=news" id="heading">
-                        <h2>Portal do Aluno</h2>
-                    </a>
-                    <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label our-text-color">Usuário</label>
-                        <input type="text" name="loginn" value="" class="form-control field" id="validationCustom01"
-                            required>
+        <article class="d-flex justify-content-center align-items-center">
+
+            <form action="/cadastro-aluno" method="post" enctype="multipart/form-data">
+
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <img src="../img/foto.png" class=" foto-user card-img-top " id="imgFoto"
+                        style="border-radius: 50%; cursor: pointer;">
+                    <input class="mb-4 " type="file" id="flImage" name="foto" accept="image/*" style="display:none;">
+                    <p style="color: rgb(78, 78, 78);"><i>Selecione uma foto</i></p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4  wrap">
+                            <input type="text" class=" form-control" name="nome" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Nome</label>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label our-text-color">Senha</label>
-                        <input type="password" name="senhaa" value="" class="form-control field" id="validationCustom02"
-                            required>
+
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="number" class=" form-control" name="idade" placeholder="18" required>
+                            <label for="floatingPassword">CPF</label>
+                        </div>
                     </div>
-                    <div class="col-12 d-flex gap-5 align-items-center pt-2">
-                        <button class="btn btn-primary " type="post"><b>Acessar</b></button>
-                        <h5 cla id="error">
-                            <%= resultado==false ? 'Senha ou login incorreto!' : '' %>
-                        </h5>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Sexo</label>
+                        </div>
                     </div>
-                </form>
-            </section>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Data de Nascimento</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Telefone</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Rua</label>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Número</label>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">CEP</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Bairro</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Estado</label>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class=" form-floating wrap">
+                            <select class="form-select " id="floatingSelect" name='funcionario'
+                                aria-label="Floating label select example" " required>
+                                <option selected disabled value="">...</option>
+                                <option value=" 0">Aluno</option>
+                                <option value="1">Professor</option>
+                                <option value="2">ADM</option>
+                            </select>
+                            <label style="padding-left: 10px;" for="floatingSelect">Usuário</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Nome da Mãe</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-floating mb-4 wrap">
+                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
+                            <label for="floatingInput">Nome do Pai</label>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn btn-outline-dark mt-4 " style=" width: 200px; font-weight: 700;"
+                    type="post">Cadastrar</button>
+            </form>
         </article>
     </main>
 </body>

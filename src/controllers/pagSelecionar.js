@@ -61,7 +61,7 @@ module.exports = {
             res.render('../views/selecionar', { pessoaEncontrada:  { IDPessoa: id }, nome, matriculasEncontradas: matriculasCompletas, funcionario});
 
         }
-        else if(funcionario == '3'){
+        else if(funcionario == '2'){
             res.render('../views/selecaoCadastro', {id});
         }
     },
