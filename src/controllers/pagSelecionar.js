@@ -73,6 +73,6 @@ module.exports = {
         const idPessoa = valores[1]; // O segundo valor é o ID da pessoa
         const funcionario = valores[2]; // O terceiro valor é a informação sobre se é funcionário     
 
-        res.redirect(`/news?idPessoa=${idPessoa}&selecionado=${idMatricula}&funcionario=${funcionario}`);  
+        res.redirect(`/news?idPessoa=${idPessoa}&selecionado=${idMatricula}&funcionario=${funcionario}&pagina=news`);  
     }
 }
