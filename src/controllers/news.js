@@ -22,9 +22,11 @@ const pessoa = require('../model/pessoa');
 module.exports = {
     
     async dados(req, res) {
+
         const idPessoa = req.query.idPessoa;
         const selecionadoMM = req.query.selecionado;
         const funcionario = req.query.funcionario;
+        const pagina = req.query.pagina;
 
         const encontrarPessoa = await pessoa.findOne({
             raw: true,
@@ -32,6 +34,7 @@ module.exports = {
             where: { IDPessoa: idPessoa }
         });
         if (funcionario == 0) {
+
             const encontrarMatricula = await matricula.findOne({
                 raw: true,
                 attributes: ['IDMatricula', 'IDCurso', 'IDTurma'],
@@ -46,7 +49,14 @@ module.exports = {
                 where: { IDCurso: idCurso }
             });
 
-            res.render('../views/news', { encontrarPessoa, encontrarMatricula, cursoEncontrado });
+            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMatricula, cursoEncontrado , idPessoa, selecionadoMM, funcionario});
         }
+        
+        
+                
+        
+          
     }
+
+
 }
