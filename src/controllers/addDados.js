@@ -54,7 +54,7 @@ async function adicionarCurso(nome, horas) {
 }
 
 adicionarCurso('Engenharia de Software', 320);
-adicionarCurso('Desinvolvimento de Sistemas', 220);
+adicionarCurso('Desenvolvimento de Sistemas', 220);
 
 
 async function adicionarTurma(nome, periodo) {
