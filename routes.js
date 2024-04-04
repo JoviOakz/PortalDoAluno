@@ -6,7 +6,7 @@ const route = express.Router();
 const home = require('./src/controllers/home');
 const login = require('./src/controllers/login');
 const pagSelecionar  = require('./src/controllers/pagSelecionar');
-const controllerNews = require('./src/controllers/news')
+const controllerDados = require('./src/controllers/dados')
 
 
 // Iniciando as rotas
@@ -16,12 +16,12 @@ route.post('/', login.verificarLogin);
 route.get('/selecionar', pagSelecionar.selecionar);
 route.post('/selecionar', pagSelecionar.selecionado);
 
-route.get('/news', controllerNews.dados);
+route.get('/news', controllerDados.dados);
 
-route.get('/grade-curricular', home.pagGradeCurricular);
+route.get('/gradeCurricular', controllerDados.dados);
 
-route.get('/boletos', home.pagBoletos);
+route.get('/boletos', controllerDados.dados);
 
-route.get('/perfil', home.pagPerfil);
+route.get('/perfil', controllerDados.dados);
 
 module.exports = route;

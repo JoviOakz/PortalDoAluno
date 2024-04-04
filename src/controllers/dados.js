@@ -17,10 +17,8 @@ const pessoa = require('../model/pessoa');
 // const selecionadoMM = query.selecionado;
 // const funcionario = query.funcionario;
 
-
-
 module.exports = {
-    
+
     async dados(req, res) {
 
         const idPessoa = req.query.idPessoa;
@@ -30,7 +28,7 @@ module.exports = {
 
         const encontrarPessoa = await pessoa.findOne({
             raw: true,
-            attributes: ['IDPessoa', 'Nome'],
+            attributes: ['IDPessoa', 'Nome', 'CPF', 'DataNascimento', 'Foto', 'Funcionario', 'Senha', 'Email', 'Telefone', 'CEP', 'Cidade', 'Estado', 'Rua', 'Numero', 'Complemento', 'Mae', 'Pai'],
             where: { IDPessoa: idPessoa }
         });
         if (funcionario == 0) {
@@ -45,18 +43,19 @@ module.exports = {
 
             const cursoEncontrado = await curso.findOne({
                 raw: true,
-                attributes: ['Nome'],
+                attributes: ['IdCurso', 'Nome', 'HorasComplementares'],
                 where: { IDCurso: idCurso }
             });
 
-            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMatricula, cursoEncontrado , idPessoa, selecionadoMM, funcionario});
+            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMatricula, cursoEncontrado, idPessoa, selecionadoMM, funcionario });
+        } else if (funcionario == 1) {
+            const encontrarMateria = await materia.findOne({
+                raw: true,
+                attributes: ['IDMateria', 'Nome', 'Data', 'Descricao'],
+                where: { IDMateria: selecionadoMM }
+            });
+
+            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMateria, idPessoa, selecionadoMM, funcionario });
         }
-        
-        
-                
-        
-          
     }
-
-
 }
