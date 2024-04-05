@@ -40,31 +40,20 @@
     </header>
 
     <main>
-        <article>
-            <section>
-                <form class="row g-3 needs-validation shadow" action="/" method="post">
-                    <a href="/news?idPessoa=3&selecionado=1&funcionario=0&pagina=news" id="heading">
-                        <h2>Portal do Aluno</h2>
-                    </a>
-                    <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label our-text-color">Usuário</label>
-                        <input type="text" name="loginn" value="" class="form-control field" id="validationCustom01"
-                            required>
+        <article class="d-flex justify-content-center align-items-center">
+
+            <form action="/formsCadastro" method="post" enctype="multipart/form-data">
+
+                <div class="row">
+                    
+                    <div class="col-6 d-flex justify-content-center">
+                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                            type="post">Cadastrar Aluno</button>
                     </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label our-text-color">Senha</label>
-                        <input type="password" name="senhaa" value="" class="form-control field" id="validationCustom02"
-                            required>
-                    </div>
-                    <div class="col-12 d-flex gap-5 align-items-center pt-2">
-                        <button class="btn btn-primary " type="post"><b>Acessar</b></button>
-                        <h5 cla id="error">
-                            <%= resultado==false ? 'Senha ou login incorreto!' : '' %>
-                        </h5>
-                    </div>
-                </form>
-            </section>
-        </article>
+
+                </div>
+
+            </form>
     </main>
 </body>
 

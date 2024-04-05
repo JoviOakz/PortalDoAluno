@@ -14,9 +14,14 @@ module.exports = {
             where: { CPF: login, Senha: senha }
         });
 
-        if(pessoaEncontrada){
+        
+
+        if(pessoaEncontrada && (pessoaEncontrada.Funcionario == 0 || pessoaEncontrada.Funcionario == 1)){
             resultado = true;
             res.redirect(`/selecionar?idPessoa=${pessoaEncontrada.IDPessoa}&nomePessoa=${pessoaEncontrada.Nome}&funcionario=${pessoaEncontrada.Funcionario}`);  
+        }
+        else if(pessoaEncontrada && pessoaEncontrada.Funcionario == 2){
+            res.redirect('/selecaoCadastro');
         }
         else {
             resultado = false;

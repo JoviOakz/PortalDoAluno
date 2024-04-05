@@ -2,8 +2,10 @@
     --main_bg_color: #48BEE6;
     --form_bg_color: #ffcc8a;
     --form_border_color: #cf7e13;
+    --btn_border_color: #c07512;
     --btn_bg_color: #f08f11;
-    --btn_press_color: #cf7e13;
+    --btn_bg_color1: #fd9103;
+    --btn_press_color: #b46907;
     --error_color: #ff0000;
     --text_color: #000000;
     --shadow_color: #cf7e13;
@@ -51,7 +53,8 @@ section {
 }
 
 form {
-    width: 800px; margin: 30px;
+    width: 800px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -79,6 +82,25 @@ form {
 
 } 
 .foto-user{
-    background-color: #f08f11;
-    
+    background-color: #f08f11; 
+}
+
+button,
+button:focus {
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(var(--btn_bg_color),var(--btn_bg_color1));
+  border: 2px solid var(--btn_border_color);
+  border-bottom: 5px solid var(--btn_border_color);
+  box-shadow: 0px 1px 6px 0px var(--shadow_color);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
+button:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid var(--btn_press_color);
 }

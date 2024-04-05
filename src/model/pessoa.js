@@ -14,6 +14,10 @@ const pessoa = database.define('Pessoa', {
         type: Sequelize.STRING(100),
         allowNull: false
     },
+    Sexo: {
+        type: Sequelize.STRING(30),
+        allowNull: false
+    },
     CPF: {
         type: Sequelize.STRING(15),
         allowNull: false
@@ -39,7 +43,7 @@ const pessoa = database.define('Pessoa', {
         allowNull: false
     },
     Telefone:{
-        type: Sequelize.STRING(10),
+        type: Sequelize.STRING(20),
         allowNull: true
     },
     CEP:{
