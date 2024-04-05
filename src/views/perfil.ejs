@@ -129,34 +129,147 @@
     </aside>
 
     <article>
-      <h1 class="mt-5">Nome da pessoa</h1>
+      <h1 class="mt-5 d-flex justify-content-center">
+        <%=encontrarPessoa.Nome %>
+      </h1>
 
-      <section class="mt-5">
-        <div class="card mb-3">
-          <div class="row g-0">
-            <div class="col-md-4">
+      <section class="mt-5 justify-content-center">
+        <div class="card mb-3" style="width: 50%; background-color: rgb(225, 229, 235);">
+          <div class="row g-0 d-flex" style="justify-content: space-around;">
+            <div class="col-md-4" style="display: flex; align-items: center;">
               <img src="img/logo_senai.png" class="img-fluid rounded-start">
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            <div class="col-md-8" style="width: 30%;">
+              <div class="card" style="border-style: none; background-color: rgb(225, 229, 235);">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <ul style="padding: 0;">
+                      <li class="list-group-item"><b style="color: rgb(16, 136, 136);">Registro acadêmico</b></li>
+                      <li class="list-group-item">
+                        <%=encontrarPessoa.CPF %>
+                      </li>
+                      <li class="list-group-item pt-3"><b style="color: rgb(16, 136, 136);">Data de nascimento</b></li>
+                      <li class="list-group-item">
+                        <%=encontrarPessoa.DataNascimento %>
+                      </li>
+                      <% if (funcionario==0) {%>
+                        <li class="list-group-item pt-3"><b style="color: rgb(16, 136, 136);">Periodo</b></li>
+                        <li class="list-group-item">
+                          <%=turmaEncontrada.Periodo %>
+                        </li>
+                        <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="gap-3" style="flex-direction: column;">
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h4>Filiação</h4>
+            <hr>
+
+            <div class="d-flex">
+              <div style="width: 48%;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Nome</h5>
+                  </li>
+                </ul>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <%=encontrarPessoa.Mae %>
+                  </li>
+                  <li class="list-group-item">
+                    <%=encontrarPessoa.Pai %>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="width: 48%; margin-left: 70px;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Tipo de relacionamento</h5>
+                  </li>
+                </ul>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Mãe</li>
+                  <li class="list-group-item">Pai</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h4>Contato</h4>
+            <hr>
+
+            <div class="d-flex">
+              <div style="width: 100%;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">E-mail:
+                    <%=encontrarPessoa.Email %>
+                  </li>
+                  <li class="list-group-item">Telefone:
+                    <%=encontrarPessoa.Telefone %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h4>Endereço</h4>
+            <hr>
+
+            <div class="d-flex">
+              <div style="width: 48%;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">CEP:
+                    <%=encontrarPessoa.CEP %>
+                  </li>
+                  <li class="list-group-item">Número:
+                    <%=encontrarPessoa.Numero %>
+                  </li>
+                  <li class="list-group-item">Cidade:
+                    <%=encontrarPessoa.Cidade %>
+                  </li>
+                  <li class="list-group-item">Complemento:
+                    <%=encontrarPessoa.Complemento %>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="width: 48%; margin-left: 70px;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Rua:
+                    <%=encontrarPessoa.Rua %>
+                  </li>
+                  <li class="list-group-item">Bairro:
+                    <%=encontrarPessoa.Bairro %>
+                  </li>
+                  <li class="list-group-item">Estado:
+                    <%=encontrarPessoa.Estado %>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section>
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </section>
     </article>
   </main>
+
+  <footer style="height: 60px;"></footer>
 </body>
 
 </html>

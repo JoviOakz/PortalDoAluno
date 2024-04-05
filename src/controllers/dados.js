@@ -28,7 +28,7 @@ module.exports = {
 
         const encontrarPessoa = await pessoa.findOne({
             raw: true,
-            attributes: ['IDPessoa', 'Nome', 'CPF', 'DataNascimento', 'Foto', 'Funcionario', 'Senha', 'Email', 'Telefone', 'CEP', 'Cidade', 'Estado', 'Rua', 'Numero', 'Complemento', 'Mae', 'Pai'],
+            attributes: ['IDPessoa', 'Nome', 'CPF', 'DataNascimento', 'Foto', 'Funcionario', 'Senha', 'Email', 'Telefone', 'CEP', 'Cidade', 'Estado', 'Bairro', 'Rua', 'Numero', 'Complemento', 'Mae', 'Pai'],
             where: { IDPessoa: idPessoa }
         });
         if (funcionario == 0) {
@@ -43,11 +43,19 @@ module.exports = {
 
             const cursoEncontrado = await curso.findOne({
                 raw: true,
-                attributes: ['IdCurso', 'Nome', 'HorasComplementares'],
+                attributes: ['IDCurso', 'Nome', 'HorasComplementares'],
                 where: { IDCurso: idCurso }
             });
 
-            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMatricula, cursoEncontrado, idPessoa, selecionadoMM, funcionario });
+            let idTurma = encontrarMatricula.IDTurma;
+
+            const turmaEncontrada = await turma.findOne({
+                raw: true,
+                attributes: ['IDTurma', 'Nome', 'Periodo'],
+                where: { IDTurma: idTurma }
+            });
+
+            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMatricula, cursoEncontrado, turmaEncontrada, idPessoa, selecionadoMM, funcionario });
         } else if (funcionario == 1) {
             const encontrarMateria = await materia.findOne({
                 raw: true,
