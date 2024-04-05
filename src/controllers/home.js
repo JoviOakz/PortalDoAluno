@@ -2,13 +2,10 @@ module.exports = {
     async pagLogin(req, res) {
         res.render('../views/login', {resultado: true});
     },
-    async pagGradeCurricular(req, res) {
-        res.render('../views/gradeCurricular');
+    async pagSelecaoCadastro(req, res){
+        res.render('../views/selecaoCadastro')
     },
-    async pagBoletos(req, res) {
-        res.render('../views/boletos');
-    },
-    async pagPerfil(req, res) {
-        res.render('../views/perfil');
+    async pagFormsCadastro(req, res){
+        res.render('../views/formsCadastro')
     }
 }

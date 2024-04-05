@@ -11,13 +11,31 @@ module.exports = {
 
         const dados = req.body;
 
-        await sala.create({
+        let foto = 'foto.png';
+        // Verificando se foi enviada alguma foto
+        if (req.file) {
+            // Pegar novo nome da foto
+            foto = req.file.filename;
+        }
+
+        if(dados.funcionario == "ADM"){
+            funcionario = 2
+        }
+        else if(dados.funcionario == "Aluno"){
+            funcionario = 0
+        }
+        else if(dados.funcionario == "Professor"){
+            funcionario = 1
+        }
+
+        await pessoa.create({
             Nome: dados.nome, 
             CPF: dados.cpf,
+            Sexo: dados.sexo,
             DataNascimento: dados.nascimento,
-            Foto: 'foto.jpg',
+            Foto: foto,
             Funcionario: dados.funcionario,
-            Senha: dados.senha,
+            Senha: dados.senha01,
             Email: dados.email,
             Telefone: dados.telefone,
             CEP: dados.cep,
