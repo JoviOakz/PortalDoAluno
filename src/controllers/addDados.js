@@ -5,10 +5,11 @@ const turma = require('../model/turma');
 const matricula = require('../model/matricula');
 
 
-async function adicionarPessoa(nome, cpf, dataNascimento, foto, funcionario, senha, email, telefone, cep, cidade, estado, bairro, rua, numero, mae, pai) {
+async function adicionarPessoa(nome, sexo, cpf, dataNascimento, foto, funcionario, senha, email, telefone, cep, cidade, estado, bairro, rua, numero, mae, pai) {
     try {
         const pessoaCriada = await pessoa.create({
             Nome: nome,
+            Sexo: sexo,
             CPF: cpf,
             DataNascimento: dataNascimento,
             Foto: foto,
@@ -33,17 +34,17 @@ async function adicionarPessoa(nome, cpf, dataNascimento, foto, funcionario, sen
 }
 
 
-adicionarPessoa('Eduardo Henrique', '32109876544', '1989-03-15', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Julia Trembulack', '32109876541', '1990-08-08', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Fernanda Oliveira', '98765432123', '1987-06-25', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Pedro Oliveira', '45678912302', '1995-03-25', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Maria Santos', '98765432109', '1988-10-20', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Ana Souza', '78901234560', '1992-07-08', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Lucas Pereira', '32109876542', '1985-12-12', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Carlos Silva', '13579246801', '1993-08-17', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Rafaela Santos', '45678901234', '1999-02-12', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Gustavo Pereira', '78901234567', '1990-11-30', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
-adicionarPessoa('Juliana Costa', '32109876543', '1984-05-08', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Eduardo Henrique', 'Masculino', '32109876544', '1989-03-15', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Julia Trembulack', 'Feminino', '32109876541', '1990-08-08', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Fernanda Oliveira', 'Feminino', '98765432123', '1987-06-25', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Pedro Oliveira', 'Masculino', '45678912302', '1995-03-25', 'foto.jpg', 1, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Maria Santos', 'Feminino', '98765432109', '1988-10-20', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Ana Souza', 'Feminino', '78901234560', '1992-07-08', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Lucas Pereira', 'Masculino', '32109876542', '1985-12-12', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Carlos Silva', 'Masculino', '13579246801', '1993-08-17', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Rafaela Santos', 'Masculino', '45678901234', '1999-02-12', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Gustavo Pereira', 'Masculino', '78901234567', '1990-11-30', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
+adicionarPessoa('Juliana Costa', 'Feminino', '32109876543', '1984-05-08', 'foto.jpg', 0, 'senha123', 'email@example.com', '1234567890', '12345-678', 'Cidade', 'Estado', 'Bairro', 'Rua', '123', 'Mãe', 'Pai');
 
 async function adicionarCurso(nome, horas) {
     
