@@ -20,6 +20,7 @@
   <!-- JAVASCRIPT -->
   <script defer src="js/switch_dark_mode.js"></script>
   <script defer src="js/editarTexto.js"></script>
+  <script defer src="js/selecionarFoto.js"></script>
 
   <!-- <div id="texto-editavel">
     Este texto não pode ser editado pelo usuário até clicar no botão abaixo.
@@ -134,11 +135,16 @@
       </h1>
 
       <section class="mt-5 justify-content-center">
-        <div class="card mb-3" style="width: 50%; background-color: rgb(225, 229, 235);">
-          <div class="row g-0 d-flex" style="justify-content: space-around;">
-            <div class="col-md-4" style="display: flex; align-items: center;">
-              <img src="img/logo_senai.png" class="img-fluid rounded-start">
+        <div class="card mb-3" style="width: 40%; background-color: rgb(225, 229, 235);">
+          <div class="g-0 d-flex gap-5" style="justify-content: center;">
+
+            <div class="col-md-4 d-flex flex-row align-items-center justify-content-center p-3">
+              <img src="img/<%=encontrarPessoa.Foto %>" class="foto-user card-img-top" id="imgFoto"
+                style="border-radius: 50%; cursor: pointer;">
+              <input class="mb-4" type="file" id="flImage" name="foto" accept="image/*" style="display:none;">
+              <p style="color: rgb(78, 78, 78);"></p>
             </div>
+
             <div class="col-md-8" style="width: 30%;">
               <div class="card" style="border-style: none; background-color: rgb(225, 229, 235);">
                 <div class="card-body">
