@@ -9,11 +9,11 @@ Paleta de cores: https://color.adobe.com/pt/ProjetoWeb-color-theme-b869893f-142d
 
 	✔️ - Modelagem do banco de dados.
 	✔️ - Gestão de Usuário - sistema permitir o login do usuario, e garantir a segurança das informações.
-	❌ - Autorização de Acessor por tipo de usuario.
-	❌ - CRUD - Create, Read, Update, Delete.
-	❌ - Validação de formulários - implemnetar validação de entradas para evitar entradas inválidas.
+	✔️ - Autorização de Acessor por tipo de usuario.
+	❌ - CRUD - ✔️ Create, ✔️ Read, Update, Delete.
+	✔️ - Validação de formulários - implemnetar validação de entradas para evitar entradas inválidas.
 	❌ - Design Responsivo.
-	❌ - Personalização do tema - dark mode, light mode.
+	✔️ - Personalização do tema - dark mode, light mode.
 
 
 	git config --global user.name "Nome"
