@@ -40,36 +40,41 @@
         </nav>
     </header>
 
-    <main class="d-flex justify-content-center align-items-center">
-        
-            
-            <div class="shadow caixa d-flex flex-column justify-content-center align-items-center gap-3">
-                <h3 class="poppins" style="color: rgb(226, 129, 1);">Selecione uma Opção:</h3>
-                <form action="/formsCadastro" method="get" class=" d-flex justify-content-center">
+    <main>
+        <article>
+            <section class="d-flex align-items-center">
+                <form action="/" method="get" class=" d-flex justify-content-center p-3">
                     <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
-                        type="post">Cadastrar Pessoa</button>
+                        type="post">Voltar</button>
                 </form>
-           
+            </section>
 
-           
-                <form action="/formsCadastro" method="get" class=" d-flex justify-content-center">
-                    <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
-                        type="post">Cadastrar Curso</button>
-                </form>
-           
-
-          
-                <form action="/formsCadastro" method="get" class=" d-flex justify-content-center">
-                    <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
-                        type="post">Cadastrar Materia</button>
-                </form>
-            </div>
-                
-
-
-       
+            <section class="d-flex justify-content-center align-items-center" style="height: 700px;">
+                <div class="shadow caixa d-flex flex-column justify-content-center align-items-center gap-3">
+                    <h3 class="poppins" style="color: rgb(226, 129, 1);">Selecione uma Opção:</h3>
+                    <form action="/formsCadastro" method="get" class=" d-flex justify-content-center">
+                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                            type="post">Cadastrar Pessoa</button>
+                    </form>
+    
+                    <form action="/formsCadastro" method="get" class=" d-flex justify-content-center">
+                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                            type="post">Cadastrar Curso</button>
+                    </form>
+    
+                    <form action="/formsCadastro" method="get" class=" d-flex justify-content-center">
+                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                            type="post">Cadastrar Materia</button>
+                    </form>
+    
+                    <form action="/deleteAluno" method="get" class=" d-flex justify-content-center">
+                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                            type="post">Deletar Aluno</button>
+                    </form>
+                </div>
+            </section>
+        </article>
     </main>
-
 </body>
 
 </html>

@@ -17,7 +17,3 @@ section {
 .input-inacessivel {
     pointer-events: none;
 }
-
-.botao-salvar {
-    display: none;
-}
