@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/forms.css">
 
-
 </head>
 
 <body>
@@ -43,22 +42,27 @@
 
     <main>
         <article class="d-flex justify-content-center align-items-center">
-
-            <form class="shadow" action="/deleteAluno" method="post">
-                <div class="row">
-                    <div class="col-6 centro">
-                        <div class="form-floating mb-4  wrap">
-                            <input type="text" class=" form-control" name="cpf" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">CPF</label>
+            <section>
+                <form class="shadow" action="/deleteAluno" method="post">
+                    <div class="row">
+                        <div>
+                            <h2 class="d-flex justify-content-center align-items-center p-3 our-text-color">Insira o CPF do aluno que deseja excluir</h2>
+                        </div>
+    
+                        <div class="col-6 centro">
+                            <div class="form-floating mb-4  wrap">
+                                <input type="text" class=" form-control" name="cpf" placeholder="MariaEduarda" required>
+                                <label for="floatingInput">CPF</label>
+                            </div>
+                        </div>
+    
+                        <div class="col-6 d-flex justify-content-center">
+                            <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                                type="post">Excluir</button>
                         </div>
                     </div>
-
-                    <div class="col-6 d-flex justify-content-center">
-                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
-                            type="post">Excluir</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </section>
         </article>
     </main>
 </body>

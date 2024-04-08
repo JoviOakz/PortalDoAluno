@@ -53,6 +53,7 @@ section {
 form {
     display: flex;
     flex-direction: column;
+    height: 380px;
     gap: 10px;
     padding-left: 2em;
     padding-right: 2em;

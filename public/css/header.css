@@ -50,16 +50,6 @@ main {
     color: var(--main_bg_color);
 }
 
-.btn {
-    background-color: var(--btn_bg_color);
-    border-color: var(--btn_press_color);
-}
-
-.btn:hover {
-    background-color: var(--btn_press_color);
-    border-color: var(--btn_press_color);
-}
-
 /* The switch - the box around the slider */
 .switch {
     display: block;

@@ -89,6 +89,11 @@ form {
     filter: drop-shadow(10px 7px 10px var(--shadow_color));
 }
 
+.our-text-color {
+    color: var(--text_color);
+    transition: .4s ease-in-out;
+}
+
 button,
 button:focus {
   font-size: 17px;
@@ -108,4 +113,3 @@ button:active {
   transform: translate(0, 0);
   border-bottom: 2px solid var(--btn_press_color);
 }
-
