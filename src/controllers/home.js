@@ -7,5 +7,8 @@ module.exports = {
     },
     async pagFormsCadastro(req, res){
         res.render('../views/formsCadastro')
+    },
+    async pagDeleteAluno(req, res){
+        res.render('../views/deleteAluno')
     }
 }

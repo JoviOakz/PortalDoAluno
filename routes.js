@@ -13,6 +13,7 @@ const login = require('./src/controllers/login');
 const pagSelecionar  = require('./src/controllers/pagSelecionar');
 const controllerDados = require('./src/controllers/dados');
 const cadastro = require('./src/controllers/cadastro');
+const controllerDelete = require('./src/controllers/delete')
 
 
 // Iniciando as rotas
@@ -33,6 +34,9 @@ route.get('/boletos', controllerDados.dados);
 route.get('/perfil', controllerDados.dados);
 
 route.get('/selecaoCadastro', home.pagSelecaoCadastro);
+
+route.get('/deleteAluno', home.pagDeleteAluno);
+route.post('/deleteAluno', controllerDelete.deletarAluno);
 
 route.get('/formsCadastro', home.pagFormsCadastro);
 route.post('/formsCadastro',multer(config).single('foto'), cadastro.cadastrarAluno);
