@@ -8,3 +8,7 @@ section {
     width: 100%;
     display: flex;
 }
+
+.input-inacessivel {
+    pointer-events: none;
+}

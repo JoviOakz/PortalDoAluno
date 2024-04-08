@@ -144,13 +144,15 @@
                 <div class="card-body">
                   <div class="d-flex">
                     <ul style="padding: 0;">
-                      <li class="list-group-item"><b style="color: rgb(16, 136, 136);">Registro acadêmico</b></li>
+                      <li class="list-group-item"><b style="color: rgb(16, 136, 136);">CPF</b></li>
                       <li class="list-group-item">
-                        <%=encontrarPessoa.CPF %>
+                        <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.CPF%>" class="campoEditavel">
+                        
                       </li>
                       <li class="list-group-item pt-3"><b style="color: rgb(16, 136, 136);">Data de nascimento</b></li>
                       <li class="list-group-item">
-                        <%=encontrarPessoa.DataNascimento %>
+                        <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.DataNascimento %>" class="campoEditavel">
+                        
                       </li>
                       <% if (funcionario==0) {%>
                         <li class="list-group-item pt-3"><b style="color: rgb(16, 136, 136);">Periodo</b></li>
@@ -182,10 +184,12 @@
 
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    <%=encontrarPessoa.Mae %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Mae %>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">
-                    <%=encontrarPessoa.Pai %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Pai %>" class="campoEditavel">
+                    
                   </li>
                 </ul>
               </div>
@@ -215,10 +219,12 @@
               <div style="width: 100%;">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">E-mail:
-                    <%=encontrarPessoa.Email %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Email %>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">Telefone:
-                    <%=encontrarPessoa.Telefone %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Telefone %>" class="campoEditavel">
+                
                   </li>
                 </ul>
               </div>
@@ -235,16 +241,20 @@
               <div style="width: 48%;">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">CEP:
-                    <%=encontrarPessoa.CEP %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.CEP%>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">Número:
-                    <%=encontrarPessoa.Numero %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Numero%>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">Cidade:
-                    <%=encontrarPessoa.Cidade %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Cidade%>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">Complemento:
-                    <%=encontrarPessoa.Complemento %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Complemento%>" class="campoEditavel">
+                    
                   </li>
                 </ul>
               </div>
@@ -252,19 +262,24 @@
               <div style="width: 48%; margin-left: 70px;">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Rua:
-                    <%=encontrarPessoa.Rua %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Rua %>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">Bairro:
-                    <%=encontrarPessoa.Bairro %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Bairro %>" class="campoEditavel">
+                    
                   </li>
                   <li class="list-group-item">Estado:
-                    <%=encontrarPessoa.Estado %>
+                    <input type="text" style="border: none; background-color: transparent;;" value="<%=encontrarPessoa.Estado %>" class="campoEditavel">
+                    
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        <button id="botaoEditarSalvar" onclick="tornarSomenteLeitura()">Editar</button>
+        
       </section>
     </article>
   </main>
