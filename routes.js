@@ -26,6 +26,8 @@ route.get('/news', controllerDados.dados);
 
 route.get('/gradeCurricular', controllerDados.dados);
 
+route.get('/avaliacao', controllerDados.dados);
+
 route.get('/boletos', controllerDados.dados);
 
 route.get('/perfil', controllerDados.dados);

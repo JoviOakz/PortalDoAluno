@@ -91,9 +91,15 @@
               class="material-symbols-outlined">newspaper</span></a>
         </li>
         <li class="nav-item justify-content-center">
-          <a
-            href="/gradeCurricular?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=gradeCurricular"><span
-              class="material-symbols-outlined">grid_view</span></a>
+          <% if (funcionario==0) {%>
+            <a
+              href="/gradeCurricular?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=gradeCurricular"><span
+                class="material-symbols-outlined">grid_view</span></a>
+            <% } else { %>
+              <a
+                href="/avaliacao?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=avaliacao"><span
+                  class="material-symbols-outlined">grid_view</span></a>
+              <% } %>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">school</span>
