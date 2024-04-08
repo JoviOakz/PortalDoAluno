@@ -13,3 +13,7 @@ section {
     width: 200px;
     height: 200px;
 }
+
+.input-inacessivel {
+    pointer-events: none;
+}

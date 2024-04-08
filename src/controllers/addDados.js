@@ -84,16 +84,16 @@ async function adicionarMateria(nome, data, desc, id) {
     });
 }
 
-adicionarMateria('Design e Aplicações de Engenharia de Software', 'Segunda', 'Esta disciplina explora os princípios e práticas de design de software, abordando desde a concepção até a implementação de sistemas de software eficientes e robustos.', 1);
-adicionarMateria('Estatística Orientada a Ciência de Dados', 'Terça', 'Nesta disciplina, os alunos aprendem a aplicar técnicas estatísticas para analisar e interpretar dados, visando extrair insights valiosos que informam processos de tomada de decisão na ciência de dados.', 2);
-adicionarMateria('Jornada de Aprendizagem: Engenharia de Requisitos e Gerência de Configuração', 'Quarta', 'Contato direto com a indústria de software para resolver problemas reais. Aprenda a identificar requisitos e controlar mudanças nos projetos, preparando-se para desafios do mundo real.', 3);
-adicionarMateria('Lógica Computacional', 'Quinta', 'Introdução aos princípios fundamentais da lógica aplicados à computação, cobrindo lógica proposicional, de predicados e técnicas de prova. Essencial para a modelagem e análise de algoritmos e sistemas de computação.', 4);
+adicionarMateria('Design e Aplicações de Engenharia de Software', 'Segunda', 'Esta disciplina explora os princípios e práticas de design de software, abordando desde a concepção até a implementação de sistemas de software eficientes e robustos.', 4);
+adicionarMateria('Estatística Orientada a Ciência de Dados', 'Terça', 'Nesta disciplina, os alunos aprendem a aplicar técnicas estatísticas para analisar e interpretar dados, visando extrair insights valiosos que informam processos de tomada de decisão na ciência de dados.', 5);
+adicionarMateria('Jornada de Aprendizagem: Engenharia de Requisitos e Gerência de Configuração', 'Quarta', 'Contato direto com a indústria de software para resolver problemas reais. Aprenda a identificar requisitos e controlar mudanças nos projetos, preparando-se para desafios do mundo real.', 6);
+adicionarMateria('Lógica Computacional', 'Quinta', 'Introdução aos princípios fundamentais da lógica aplicados à computação, cobrindo lógica proposicional, de predicados e técnicas de prova. Essencial para a modelagem e análise de algoritmos e sistemas de computação.', 7);
 
 
-adicionarMateria('Ciência, Tecnologia e Sustentabilidade', 'Segunda', 'Aplicações práticas de ciência e tecnologia visando soluções sustentáveis para desafios industriais, ambientais e sociais, alinhadas com os princípios da indústria 4.0.', 4);
-adicionarMateria('Design de Software Aplicado a Engenharia', 'Terça', 'Aplica princípios de design de software para desenvolver soluções eficientes e escaláveis para problemas de engenharia, abrangendo desde arquitetura até implementação.', 3);
-adicionarMateria('Jornada de Aprendizagem - Inovação e às Necessidades da Sociedade', 'Quarta', 'Oferece uma imersão na inovação tecnológica, com foco nas necessidades da sociedade, explorando soluções criativas para problemas reais.', 2);
-adicionarMateria('Matemática Discreta e Finita', 'Quinta', 'Estudo de estruturas matemáticas discretas, como conjuntos, lógica proposicional e teoria dos grafos, fundamentais para a computação e a resolução de problemas complexos.', 1);
+adicionarMateria('Ciência, Tecnologia e Sustentabilidade', 'Segunda', 'Aplicações práticas de ciência e tecnologia visando soluções sustentáveis para desafios industriais, ambientais e sociais, alinhadas com os princípios da indústria 4.0.', 7);
+adicionarMateria('Design de Software Aplicado a Engenharia', 'Terça', 'Aplica princípios de design de software para desenvolver soluções eficientes e escaláveis para problemas de engenharia, abrangendo desde arquitetura até implementação.', 6);
+adicionarMateria('Jornada de Aprendizagem - Inovação e às Necessidades da Sociedade', 'Quarta', 'Oferece uma imersão na inovação tecnológica, com foco nas necessidades da sociedade, explorando soluções criativas para problemas reais.', 5);
+adicionarMateria('Matemática Discreta e Finita', 'Quinta', 'Estudo de estruturas matemáticas discretas, como conjuntos, lógica proposicional e teoria dos grafos, fundamentais para a computação e a resolução de problemas complexos.', 4);
 
 
 async function adicionarMatricula(pessoa, curso, turma) {
@@ -104,5 +104,7 @@ async function adicionarMatricula(pessoa, curso, turma) {
     });
 }
 
-adicionarMatricula(5, 1, 3)
-adicionarMatricula(5, 2, 1)
+adicionarMatricula(3, 1, 3)
+adicionarMatricula(3, 2, 1)
+adicionarMatricula(2, 1, 3)
+adicionarMatricula(2, 2, 1)
