@@ -16,19 +16,27 @@
 
 function tornarSomenteLeitura() {
   const inputs = document.querySelectorAll('.campoEditavel');
-  const botao = document.getElementById('botaoEditarSalvar'); // Adicionei esta 
+  const botaoEditar = document.getElementById('botaoEditarSalvar');
+  const botaoSalvar = document.getElementById('botaoSalvar');
 
-  if (botao.textContent === 'Editar') {
+  if (botaoEditar.textContent === 'Editar') {
     inputs.forEach(input => {
       input.readOnly = false; // Torna o campo editável
       input.classList.remove('input-inacessivel'); // Remove a classe para tornar o campo clicável
     });
-    botao.textContent = 'Salvar';
+    botaoEditar.textContent = 'Cancelar';
+    botaoSalvar.style.display = 'inline'; // Mostra o botão de salvar
   } else {
     inputs.forEach(input => {
       input.readOnly = true; // Torna o campo somente leitura
       input.classList.add('input-inacessivel'); // Adiciona a classe para tornar o campo não clicável
     });
-    botao.textContent = 'Editar';
+    botaoEditar.textContent = 'Editar';
+    botaoSalvar.style.display = 'none'; // Esconde o botão de salvar
   }
+}
+
+function salvarEdicao() {
+  // Lógica para salvar as edições
+  alert('Edições salvas com sucesso!');
 }

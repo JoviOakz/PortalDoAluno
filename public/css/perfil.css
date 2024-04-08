@@ -9,6 +9,15 @@ section {
     display: flex;
 }
 
+.foto-user{
+    width: 200px;
+    height: 200px;
+}
+
 .input-inacessivel {
     pointer-events: none;
+}
+
+.botao-salvar {
+    display: none;
 }
