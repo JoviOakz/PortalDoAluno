@@ -44,6 +44,7 @@ main {
 
 .our-text-color {
     color: var(--text_color);
+    transition: .4s ease-in-out;
 }
 
 .logo {
