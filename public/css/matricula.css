@@ -1,11 +1,19 @@
 :root {
     --main_bg_color: #48BEE6;
+    --field_bg_color_2: #ffa631;
+    --field_shadow_color_2: #915200;
 }
 
 .dark-mode {
     --main_bg_color: #2e2c2c;
+    --field_bg_color_2: #171717;
+    --field_shadow_color_2: #050505;
 }
 
+main{
+    background-color: var(--main_bg_color);
+    transition: .4s ease-in-out;
+}
 
 .card {
     width: 500px;
@@ -16,7 +24,36 @@
 }
 
 .nome-aluno {
-    background-color: #ffcc8a;
+    background-color: #ffffff;
     padding: 5px 20px;
     border-radius: 40px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--field_bg_color_2);
+    box-shadow: inset 2px 5px 10px var(--field_shadow_color_2);
+    transition: .4s ease-in-out;
+}
+
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
 }
