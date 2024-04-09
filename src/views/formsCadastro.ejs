@@ -45,8 +45,7 @@
     <main>
         <article class="d-flex justify-content-center align-items-center">
 
-            <form class="shadow" action="/formsCadastro" method="post" enctype="multipart/form-data">
-
+            <form class="shadow form-column" id="form-select" action="/formsCadastro" method="post" enctype="multipart/form-data">
                 <div class="d-flex flex-column align-items-center justify-content-center">
                     <img src="../img/foto.png" class=" foto-user card-img-top " id="imgFoto"
                         style="border-radius: 50%; cursor: pointer;">
@@ -117,21 +116,21 @@
                         </div>
                     </div>
 
-                    <div class="col-3 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Número</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="numero" required>
                         </div>
                     </div>
 
-                    <div class="col-3 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">CEP</label>
                         <div class="mb-4 wrap">
                             <input type="number" class="form-control field" name="cep" required>
                         </div>
                     </div>
 
-                    <div class="col-6 centro">
+                    <div class="col-md-6 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Bairro</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="bairro" required>
@@ -139,42 +138,42 @@
                     </div>
 
 
-                    <div class="col-3 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Estado</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="estado" required>
                         </div>
                     </div>
 
-                    <div class="col-3 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Complemento</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="complemento">
                         </div>
                     </div>
 
-                    <div class="col-6 centro">
+                    <div class="col-md-6 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Cidade</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="cidade" required>
                         </div>
                     </div>
 
-                    <div class="col-6 centro">
+                    <div class="col-md-6 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Nome da Mãe</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="mae" required>
                         </div>
                     </div>
 
-                    <div class="col-6 centro">
+                    <div class="col-md-6 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Nome do Pai</label>
                         <div class="mb-4 wrap">
                             <input type="text" class="form-control field" name="pai" required>
                         </div>
                     </div>
 
-                    <div class="col-3 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Senha</label>
                         <div class="mb-4 wrap">
                             <input type="password" class="form-control field" name="senha01"
@@ -182,7 +181,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Confirmar Senha</label>
                         <div class="mb-4 wrap">
                             <input type="password" class="form-control field" name="senha02"
@@ -194,9 +193,7 @@
                         <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
                             type="post">Cadastrar</button>
                     </div>
-
                 </div>
-
             </form>
         </article>
     </main>
