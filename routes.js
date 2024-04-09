@@ -33,7 +33,7 @@ route.get('/avaliacao', controllerDados.dados);
 route.get('/boletos', controllerDados.dados);
 
 route.get('/perfil', controllerDados.dados);
-route.post('/perfil', controllerUpdateDados.updateDados);
+route.post('/perfil',multer(config).single('foto'), controllerUpdateDados.updateDados);
 
 route.get('/selecaoCadastro', home.pagSelecaoCadastro);
 

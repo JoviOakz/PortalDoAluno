@@ -3,6 +3,7 @@ const curso = require('../model/curso');
 const turma = require('../model/turma');
 const materia = require('../model/materia');
 const pessoa = require('../model/pessoa');
+const fs = require('fs');
 
 
 
@@ -10,43 +11,41 @@ module.exports = {
 
     async updateDados(req, res) {
 
-        const idPessoa = req.query.idPessoa;
-        const selecionado = req.query.selecionado;
-        const funcionario = req.query.funcionario;
-        const pagina = req.query.pagina;
-
-        console.log(idPessoa);
-
+        // const idPessoa = req.query.id;
+        // const selecionado = req.query.selec;
+        // const funcionario = req.query.func;
+        
         const dados = req.body;
 
-
+        let foto = 'foto.png';
+        // Verificando se foi enviada alguma foto
+        if (req.file) {
+            // Pegar novo nome da foto
+            foto = req.file.filename;
+        }
 
         const encontrarPessoa = await pessoa.findOne({
             raw: true,
             attributes: ['IDPessoa', 'Nome', 'CPF', 'DataNascimento', 'Foto', 'Funcionario', 'Senha', 'Email', 'Telefone', 'CEP', 'Cidade', 'Estado', 'Bairro', 'Rua', 'Numero', 'Complemento', 'Mae', 'Pai'],
-            where: { IDPessoa: 3 }
+            where: { IDPessoa: dados.id }
         });
 
         const encontrarMatricula = await matricula.findOne({
             raw: true,
             attributes: ['IDMatricula', 'IDCurso', 'IDTurma'],
-            where: { IDMatricula: 1 }
+            where: { IDMatricula: dados.selec }
         });
         let idCurso = encontrarMatricula.IDCurso;
 
-            const cursoEncontrado = await curso.findOne({
-                raw: true,
-                attributes: ['IDCurso', 'Nome', 'HorasComplementares'],
-                where: { IDCurso: idCurso }
-            });
-
-
-
+        const cursoEncontrado = await curso.findOne({
+            raw: true,
+            attributes: ['IDCurso', 'Nome', 'HorasComplementares'],
+            where: { IDCurso: idCurso }
+        });
 
 
         const pessoaa = await pessoa.findOne({
-
-            where: { IDPessoa: 3}
+            where: { IDPessoa: dados.id}
         });
 
         // Comparar os dados atuais com os dados enviados no corpo da requisição
@@ -56,10 +55,28 @@ module.exports = {
             }
         });
 
+        
+        if (fs.existsSync(`../../public/img/${pessoaa.Foto}`)) {
+            // Exclui o arquivo
+            fs.unlink(`../../public/img/${pessoaa.Foto}`, (err) => {
+                if (err) {
+                    console.error('Erro ao excluir o arquivo:', err);
+                } else {
+                    console.log('Arquivo excluído com sucesso!');
+                }
+            });
+        } else {
+            console.log('O arquivo não existe.');
+        }
+
+
+
+        pessoaa.Foto = foto;
+
         // Atualiza os dados no banco de dados
         await pessoaa.save();
 
-        res.redirect(`/perfil?idPessoa=3&selecionado=1&funcionario=0&pagina=perfil`);
+        res.redirect(`/perfil?idPessoa=${dados.id}&selecionado=${dados.selec}&funcionario=${dados.func}&pagina=perfil`);
 
 
     }
