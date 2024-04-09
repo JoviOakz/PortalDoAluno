@@ -42,6 +42,10 @@ main {
 
 }
 
+.our-text-color {
+    color: var(--text_color);
+}
+
 .logo {
     width: 150px;
 }
