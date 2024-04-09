@@ -5,9 +5,13 @@
 }
 
 .dark-mode {
-    --left_bar_bg_color: #c7a23e;
+    --left_bar_bg_color: #daa515;
     --symbols_color: #7c4803;
-    --circle_bg_color: #bd9118;
+    --circle_bg_color: #cc9600;
+}
+
+aside{
+    width: 80px;
 }
 
 .container{
@@ -33,7 +37,7 @@
 }
 
 .ponta {
-    width: 80px;
+    width: 4%;
 }
 
 .triangulo-para-baixo {

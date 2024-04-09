@@ -3,11 +3,15 @@
 :root {
     --hd_color: #0c9cc0;
     --main_bg_color: #ffffff;
+    --font_color: #ffffff;
+    --text_color: #000000;
 }
 
 .dark-mode {
-    --hd_color: #094958;
-    --main_bg_color: #ffffff;
+    --hd_color: #005a6e;
+    --main_bg_color: #222222;
+    --font_color: #e7e7e7;
+    --text_color: #ffffff;
 }
 
 * {
@@ -28,9 +32,18 @@ nav {
 }
 
 main {
-    min-height: 92vh;
+    min-height: 86vh;
+    height: auto;
     background-color: var(--main_bg_color);
+    transition: .4s ease-in-out;
 }
+footer{
+    min-height: 6vh;
+    background-color: var(--main_bg_color);
+    transition: .4s ease-in-out;
+}
+
+
 
 .poppins-bold {
     font-family: "Poppins", sans-serif;
@@ -52,7 +65,8 @@ main {
 }
 
 .navbar-nav {
-    color: var(--main_bg_color);
+    color: var(--font_color);
+    transition: .4s ease-in-out;
 }
 
 /* The switch - the box around the slider */
@@ -67,6 +81,7 @@ main {
     position: relative;
     width: var(--width-of-switch);
     height: var(--height-of-switch);
+    transition: .4s ease-in-out;
 }
 
 /* Hide default HTML checkbox */
@@ -99,7 +114,6 @@ main {
     top: 50%;
     transform: translateY(-50%);
     background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-    ;
     transition: .4s;
 }
 
@@ -112,4 +126,11 @@ input:checked+.slider:before {
     background: #303136;
     /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+@media (max-width: 991px){
+    .nav-item-header{
+        padding: 10px 0px;
+        padding-left: 20px;
+    }
 }
