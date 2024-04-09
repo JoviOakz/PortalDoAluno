@@ -3,84 +3,82 @@ const curso = require('../model/curso');
 const turma = require('../model/turma');
 const materia = require('../model/materia');
 const pessoa = require('../model/pessoa');
+const fs = require('fs');
 
 
 
 module.exports = {
 
     async updateDados(req, res) {
-        // const idPessoa = req.query.idPessoa;
-    
-        // const dados = req.body;
 
-        // const encontrarPessoa = await pessoa.findOne({
-        //     raw: true,
-        //     attributes: ['IDPessoa', 'Nome', 'CPF', 'DataNascimento', 'Foto', 'Funcionario', 'Senha', 'Email', 'Telefone', 'CEP', 'Cidade', 'Estado', 'Bairro', 'Rua', 'Numero', 'Complemento', 'Mae', 'Pai'],
-        //     where: { IDPessoa: idPessoa }
-        // });
-
-
-
-        // // Atualiza os dados no banco de dados
-        // const pessoaAtualizada = await pessoa.update(
-        //     {  Nome: dados.nome, 
-        //         CPF: dados.cpf,
-        //         Sexo: dados.sexo,
-        //         DataNascimento: dados.nascimento,
-        //         Foto: foto,
-        //         Funcionario: dados.funcionario,
-        //         Senha: dados.senha01,
-        //         Email: dados.email,
-        //         Telefone: dados.telefone,
-        //         CEP: dados.cep,
-        //         Cidade: dados.cidade,
-        //         Estado: dados.estado,
-        //         Bairro: dados.bairro,
-        //         Rua: dados.rua,
-        //         Numero: dados.numero,
-        //         Complemento: dados.complemento,
-        //         Mae: dados.mae,
-        //         Pai: dados.pai }, // Novos dados que serão atualizados
-        //     {
-        //         where: { IDPessoa: idPessoa }, // Condição para selecionar a pessoa que será atualizada
-        //         returning: true // Retorna o registro atualizado
-        //     }
-        // );
+        // const idPessoa = req.query.id;
+        // const selecionado = req.query.selec;
+        // const funcionario = req.query.func;
         
+        const dados = req.body;
 
-        // if (pessoaAtualizada) {
-        //     res.status(200).json({ mensagem: 'Dados atualizados com sucesso', pessoa: pessoaAtualizada });
-        // } else {
-        //     res.status(404).json({ erro: 'Pessoa não encontrada' });
-        // }
+        let foto = 'foto.png';
+        // Verificando se foi enviada alguma foto
+        if (req.file) {
+            // Pegar novo nome da foto
+            foto = req.file.filename;
+        }
+
+        const encontrarPessoa = await pessoa.findOne({
+            raw: true,
+            attributes: ['IDPessoa', 'Nome', 'CPF', 'DataNascimento', 'Foto', 'Funcionario', 'Senha', 'Email', 'Telefone', 'CEP', 'Cidade', 'Estado', 'Bairro', 'Rua', 'Numero', 'Complemento', 'Mae', 'Pai'],
+            where: { IDPessoa: dados.id }
+        });
+
+        const encontrarMatricula = await matricula.findOne({
+            raw: true,
+            attributes: ['IDMatricula', 'IDCurso', 'IDTurma'],
+            where: { IDMatricula: dados.selec }
+        });
+        let idCurso = encontrarMatricula.IDCurso;
+
+        const cursoEncontrado = await curso.findOne({
+            raw: true,
+            attributes: ['IDCurso', 'Nome', 'HorasComplementares'],
+            where: { IDCurso: idCurso }
+        });
 
 
+        const pessoaa = await pessoa.findOne({
+            where: { IDPessoa: dados.id}
+        });
 
-        try {
-            const pessoaAtual = await pessoa.findOne({
-                where: { IDPessoa: idPessoa }
-            });
-    
-            if (!pessoaAtual) {
-                return res.status(404).json({ erro: 'Pessoa não encontrada' });
+        // Comparar os dados atuais com os dados enviados no corpo da requisição
+        Object.keys(dados).forEach(key => {
+            if (pessoaa[key] !== dados[key]) {
+                pessoaa[key] = dados[key];
             }
-    
-            // Comparar os dados atuais com os dados enviados no corpo da requisição
-            Object.keys(dados).forEach(key => {
-                if (pessoaAtual[key] !== dados[key]) {
-                    pessoaAtual[key] = dados[key];
+        });
+
+        
+        if (fs.existsSync(`../../public/img/${pessoaa.Foto}`)) {
+            // Exclui o arquivo
+            fs.unlink(`../../public/img/${pessoaa.Foto}`, (err) => {
+                if (err) {
+                    console.error('Erro ao excluir o arquivo:', err);
+                } else {
+                    console.log('Arquivo excluído com sucesso!');
                 }
             });
-    
-            // Atualiza os dados no banco de dados
-            await pessoaAtual.save();
-    
-            res.status(200).json({ mensagem: 'Dados atualizados com sucesso', pessoa: pessoaAtual });
-        } catch (error) {
-            console.error('Erro ao atualizar dados:', error);
-            res.status(500).json({ erro: 'Erro interno do servidor' });
+        } else {
+            console.log('O arquivo não existe.');
         }
-        
+
+
+
+        pessoaa.Foto = foto;
+
+        // Atualiza os dados no banco de dados
+        await pessoaa.save();
+
+        res.redirect(`/perfil?idPessoa=${dados.id}&selecionado=${dados.selec}&funcionario=${dados.func}&pagina=perfil`);
+
+
     }
 }
 

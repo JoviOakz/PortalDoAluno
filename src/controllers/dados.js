@@ -63,7 +63,7 @@ module.exports = {
                 where: { IDMateria: selecionadoMM }
             });
 
-            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMateria, idPessoa, selecionadoMM, funcionario });
+            res.render(`../views/${pagina}`, { encontrarPessoa, encontrarMateria, idPessoa, selecionadoMM, funcionario, pagina });
         }
     }
 }
