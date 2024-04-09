@@ -14,18 +14,26 @@
         crossorigin="anonymous"></script>
 
     <!-- JAVASCRIPT -->
+    <script defer src="js/switch_dark_mode.js"></script>
     <script defer src="js/selecionar-materia-curso.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/matricula.css">
+    <link rel="stylesheet" href="css/botao.css">
 
 </head>
 
 <body>
-    <header class="d-flex align-items-center justify-content-center" style="background-color: #0C9ABE;">
+    <header class="d-flex align-items-center justify-content-center">
         <nav class="navbar navbar-expand-lg poppins-bold">
             <div class="container-fluid ">
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeSwitch" onchange="toggleDarkMode()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <img class="logo" src="img/logo.png">
                 </div>
@@ -41,10 +49,10 @@
                 <%if(funcionario == '0'){%>
                     <% if(matriculasEncontradas.length> 0) {%>
                         <% for(let i=0; i< matriculasEncontradas.length; i++) {%>
-                            <div class="card mb-3" style="width: 30rem;">
-                                <div class="card-body d-flex align-items-center">
+                            <div class="card mb-3 field align-items-start" style="width: 30rem;">
+                                <div class="d-flex align-items-center">
                                     <div class="form-check">
-                                        <input class="form-check-input" value='<%=matriculasEncontradas[i].IDMatricula%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' type="radio" name="flexRadioDefault" id="flexRadioDefault<%= i + 1 %>">
+                                        <input class="form-check-input" value='<%=matriculasEncontradas[i].IDMatricula%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' type="radio" name="flexRadioDefault" id="flexRadioDefault<%= i + 1 %>" required>
                                         <label class="form-check-label" for="flexRadioDefault<%= i + 1 %>">
                                             
                                             ID: <%= matriculasEncontradas[i].IDCurso %> <br>
@@ -63,10 +71,10 @@
                     <% if(materiasEncontradas.length> 0) {%>
                         <% for(let i=0; i< materiasEncontradas.length; i++) {%>
         
-                            <div class="card mb-3" style="width: 30rem;">
-                                <div class="card-body d-flex align-items-center">
+                            <div class="card mb-3 field align-items-start" style="width: 30rem;">
+                                <div class="d-flex align-items-center">
                                     <div class="form-check">
-                                        <input class="form-check-input" value='<%=materiasEncontradas[i].IDMateria%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' name="flexRadioDefault" type="radio" id="flexRadioDefault<%= i + 1 %>" >
+                                        <input class="form-check-input" value='<%=materiasEncontradas[i].IDMateria%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' name="flexRadioDefault" type="radio" id="flexRadioDefault<%= i + 1 %>" required>
                                         <label class="form-check-label" for="flexRadioDefault<%= i + 1 %>"> 
                                             Materia: <%= materiasEncontradas[i].Nome%> <br>
                                             <%= materiasEncontradas[i].Data%>-feira
@@ -79,7 +87,8 @@
                         <h4 class="texto-caixa">Nenhuma materia encontrada</h4>
                     <% } %>
                 <% } %>
-                <button type="submit">Redirecionar</button>
+
+                <button style="width: 150px; color: white;" type="submit">Redirecionar</button>
             </form>
         </article>
     </main>

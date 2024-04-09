@@ -20,7 +20,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/forms.css">
-    
+    <link rel="stylesheet" href="css/input.css">
+
 
 </head>
 
@@ -50,144 +51,142 @@
                     <img src="../img/foto.png" class=" foto-user card-img-top " id="imgFoto"
                         style="border-radius: 50%; cursor: pointer;">
                     <input class="mb-4 " type="file" id="flImage" name="foto" accept="image/*" style="display:none;">
-                    <p style="color: rgb(78, 78, 78);"><i>Selecione uma foto</i></p>
+                    <p class="photo-text"><i>Selecione uma foto</i></p>
                 </div>
 
                 <div class="row">
                     <div class="col-6 centro">
-                        <div class="form-floating mb-4  wrap">
-                            <input type="text" class=" form-control" name="nome" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Nome Completo</label>
+                        <label class="our-text-color" style="padding-left: 10px;">Nome Completo</label>
+                        <div class="mb-4  wrap">
+                            <input type="text" class=" form-control field" name="nome" required>
                         </div>
                     </div>
 
                     <div class="col-3 centro">
-                        <div class=" form-floating wrap">
-                            <select class="form-select " id="floatingSelect" name='funcionario'
+                        <label class="our-text-color" style="padding-left: 10px;">Usuário</label>
+                        <div class="wrap">
+                            <select class="form-select field" id="floatingSelect" name='funcionario'
                                 aria-label="Floating label select example" " required>
                                 <option selected disabled value="">...</option>
                                 <option value=" 0">Aluno</option>
                                 <option value="1">Professor</option>
                                 <option value="2">ADM</option>
                             </select>
-                            <label style="padding-left: 10px;" for="floatingSelect">Usuário</label>
                         </div>
                     </div>
 
                     <div class="col-md-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="sexo" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Sexo</label>
+                        <label class="our-text-color" style="padding-left: 10px;">Sexo</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="sexo" required>
                         </div>
                     </div>
 
                     <div class="col-md-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="number" class=" form-control" name="cpf" placeholder="18" required>
-                            <label for="floatingPassword">CPF</label>
+                        <label class="our-text-color" style="padding-left: 10px;">CPF</label>
+                        <div class="mb-4 wrap">
+                            <input type="number" class="form-control field" name="cpf" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Data de Nascimento</label>
+                        <div class="mb-4 wrap">
+                            <input type="date" class="form-control field" name="nascimento" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Telefone</label>
+                        <div class="mb-4 wrap">
+                            <input type="tel" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" class="form-control field" name="telefone" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Email</label>
+                        <div class="mb-4 wrap">
+                            <input type="email" class="form-control field" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Rua</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="rua" required>
+                        </div>
+                    </div>
+
+                    <div class="col-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Número</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="numero" required>
+                        </div>
+                    </div>
+
+                    <div class="col-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">CEP</label>
+                        <div class="mb-4 wrap">
+                            <input type="number" class="form-control field" name="cep" required>
+                        </div>
+                    </div>
+
+                    <div class="col-6 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Bairro</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="bairro" required>
                         </div>
                     </div>
 
 
-                    <div class="col-md-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="date" class="form-control" name="nascimento" placeholder="MariaEduarda"
+                    <div class="col-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Estado</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="estado" required>
+                        </div>
+                    </div>
+
+                    <div class="col-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Complemento</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="complemento">
+                        </div>
+                    </div>
+
+                    <div class="col-6 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Cidade</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="cidade" required>
+                        </div>
+                    </div>
+
+                    <div class="col-6 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Nome da Mãe</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="mae" required>
+                        </div>
+                    </div>
+
+                    <div class="col-6 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Nome do Pai</label>
+                        <div class="mb-4 wrap">
+                            <input type="text" class="form-control field" name="pai" required>
+                        </div>
+                    </div>
+
+                    <div class="col-3 centro">
+                        <label class="our-text-color" style="padding-left: 10px;">Senha</label>
+                        <div class="mb-4 wrap">
+                            <input type="password" class="form-control field" name="senha01"
                                 required>
-                            <label for="floatingInput">Data de Nascimento</label>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="tel" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" placeholder="(41) 9 0000-0000"
-                                class="form-control" name="telefone" required>
-                            <label for="floatingInput">Telefone</label>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="email" class="form-control" name="email" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Email</label>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="rua" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Rua</label>
                         </div>
                     </div>
 
                     <div class="col-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="numero" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Número</label>
-                        </div>
-                    </div>
-
-                    <div class="col-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="number" class="form-control" name="cep" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">CEP</label>
-                        </div>
-                    </div>
-
-                    <div class="col-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="bairro" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Bairro</label>
-                        </div>
-                    </div>
-
-
-                    <div class="col-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="estado" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Estado</label>
-                        </div>
-                    </div>
-
-                    <div class="col-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="complemento" placeholder="MariaEduarda"
-                                >
-                            <label for="floatingInput">Complemento</label>
-                        </div>
-                    </div>
-
-                    <div class="col-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="cidade" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Cidade</label>
-                        </div>
-                    </div>
-
-                    <div class="col-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="mae" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Nome da Mãe</label>
-                        </div>
-                    </div>
-
-                    <div class="col-6 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="text" class="form-control" name="pai" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Nome do Pai</label>
-                        </div>
-                    </div>
-
-                    <div class="col-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="password" class="form-control" name="senha01" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Senha</label>
-                        </div>
-                    </div>
-
-                    <div class="col-3 centro">
-                        <div class="form-floating mb-4 wrap">
-                            <input type="password" class="form-control" name="senha02" placeholder="MariaEduarda" required>
-                            <label for="floatingInput">Confirmar Senha</label>
+                        <label class="our-text-color" style="padding-left: 10px;">Confirmar Senha</label>
+                        <div class="mb-4 wrap">
+                            <input type="password" class="form-control field" name="senha02"
+                                required>
                         </div>
                     </div>
 
