@@ -105,6 +105,10 @@ form {
     transition: .4s ease-in-out;
 }
 
+#form-delete{
+    width: 650px;
+}
+
 button,
 button:focus {
   font-size: 17px;
@@ -142,5 +146,11 @@ button:active {
 
     #form-select{
         height: 1850px;
+    }
+}
+
+@media (max-width: 700px){
+    #form-delete{
+        width: 450px;
     }
 }
