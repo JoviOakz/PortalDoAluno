@@ -129,6 +129,10 @@ button:active {
   border-bottom: 2px solid var(--btn_press_color);
 }
 
+#button-cad{
+    margin: 0;
+}
+
 @media (max-width: 833px){
     article{
         height: 920px;
@@ -145,12 +149,27 @@ button:active {
     }
 
     #form-select{
-        height: 1850px;
+        height: 1930px;
     }
 }
 
 @media (max-width: 700px){
     #form-delete{
         width: 450px;
+    }
+}
+
+@media ((min-width: 320px) and (max-width: 425px)){
+    #form-select{
+        width: 270px;
+        height: 1940px;
+    }
+    
+    #button-cad{
+        margin-left: 50px;
+    }
+
+    #form-delete{
+        width: 300px;
     }
 }

@@ -16,7 +16,7 @@ main{
 }
 
 .card {
-    width: 500px;
+    width: 480px;
 }
 
 .texto-caixa {
@@ -56,4 +56,18 @@ main{
     outline: none;
     width: 100%;
     color: #d3d3d3;
+}
+
+@media ((min-width: 320px) and (max-width: 425px)){
+    form{
+        max-width: 300px;
+    }
+
+    .card{
+        width: 250px;
+    }
+
+    .nome-aluno{
+        width: 275px;
+    }
 }

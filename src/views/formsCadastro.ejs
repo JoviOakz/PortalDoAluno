@@ -54,16 +54,16 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6 centro">
+                    <div class="col-md-6 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Nome Completo</label>
                         <div class="mb-4  wrap">
                             <input type="text" class=" form-control field" name="nome" required>
                         </div>
                     </div>
 
-                    <div class="col-3 centro">
+                    <div class="col-md-6 centro">
                         <label class="our-text-color" style="padding-left: 10px;">Usuário</label>
-                        <div class="wrap">
+                        <div class="mb-4 wrap">
                             <select class="form-select field" id="floatingSelect" name='funcionario'
                                 aria-label="Floating label select example" " required>
                                 <option selected disabled value="">...</option>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 centro">
+                    <div class="col-md-3 centro">
                         <label class="our-text-color" style="padding-left: 10px;">CPF</label>
                         <div class="mb-4 wrap">
                             <input type="number" class="form-control field" name="cpf" required>
@@ -190,13 +190,14 @@
                     </div>
 
                     <div class="col-6 d-flex justify-content-center">
-                        <button class="wrap mt-2 " style="height: 50px; color: white ;font-weight: 500; margin: 0px;"
+                        <button class="wrap mt-2" id="button-cad" style="height: 50px; color: white ;font-weight: 500;"
                             type="post">Cadastrar</button>
                     </div>
                 </div>
             </form>
         </article>
     </main>
+    <footer style="min-height: 4px;"></footer>
 </body>
 
 </html>
