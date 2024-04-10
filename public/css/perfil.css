@@ -4,9 +4,12 @@
     --btn_bg_color: #f08f11;
     --btn_bg_color1: #fd9103;
     --btn_press_color: #b46907;
-
-    
     --shadow_color: #cf7e13;
+
+    --card_color:#f5f5f5;
+    --text_color_sm: #808080;
+    --border_color: #0C9ABE;
+    --box_shadow: rgba(0, 0, 0, 0.25);
 }
 
 .dark-mode {
@@ -20,7 +23,13 @@
     --shadow_color: #ff7b00;
     --field_bg_color: #171717;
     --field_shadow_color: #050505;
+
+    --card_color: #8f8f8f ;
+    --text_color_sm: #303030;
+    --border_color: #02c0f0;
+    --box_shadow: rgba(255, 255, 255, 0.25);
 }
+
 html {
     font-size: 16px; /* Define o tamanho de fonte padrão para 16 pixels */
 }
@@ -28,8 +37,6 @@ html {
 .texto,input{
     font-size: 1vmax;
 }
-
-
 
 .texto-g{
     font-size: 2vmax;
@@ -105,3 +112,9 @@ section {
   border-bottom: 2px solid var(--btn_press_color);
 }
 
+
+@media (min-width: 400px){
+    .contato{
+        width: 20vmax;
+    }
+}
