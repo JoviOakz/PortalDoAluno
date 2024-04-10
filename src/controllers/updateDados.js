@@ -17,12 +17,7 @@ module.exports = {
         
         const dados = req.body;
 
-        let foto = 'foto.png';
-        // Verificando se foi enviada alguma foto
-        if (req.file) {
-            // Pegar novo nome da foto
-            foto = req.file.filename;
-        }
+        
 
         const encontrarPessoa = await pessoa.findOne({
             raw: true,
@@ -47,6 +42,13 @@ module.exports = {
         const pessoaa = await pessoa.findOne({
             where: { IDPessoa: dados.id}
         });
+
+        let foto = pessoaa.Foto;
+        // Verificando se foi enviada alguma foto
+        if (req.file) {
+            // Pegar novo nome da foto
+            foto = req.file.filename;
+        }
 
         // Comparar os dados atuais com os dados enviados no corpo da requisição
         Object.keys(dados).forEach(key => {

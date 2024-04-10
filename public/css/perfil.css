@@ -21,26 +21,67 @@
     --field_bg_color: #171717;
     --field_shadow_color: #050505;
 }
+html {
+    font-size: 16px; /* Define o tamanho de fonte padrão para 16 pixels */
+}
+  
+.texto,input{
+    font-size: 1vmax;
+}
+
+
+
+.texto-g{
+    font-size: 2vmax;
+}
+.texto-m{
+    font-size: 1.4vmax;
+}
+.texto-p{
+    font-size: 1.2vmax;
+}
+.texto-pp{
+    font-size: 1vmax;
+}
 
 article {
-    width: 80%;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
 }
 
 section {
-    width: 100%;
     display: flex;
+    align-items: center;
 }
 
 .foto-user{
-    width: 200px;
-    height: 200px;
+    max-width: 180px;
+    max-height: 180px;
 }
 
 .input-inacessivel {
     pointer-events: none;
 }
+
+.card{
+    width: 70%;
+}
+
+.caixa-perfil{
+    max-width: 40vmax;
+}
+
+.caixa{
+    flex-wrap: wrap;
+}
+.caixa-p{
+    width: 30vmax;
+}
+.caixa-pp{
+    width: 17vmax;
+}
+
 
 
 .btn,
