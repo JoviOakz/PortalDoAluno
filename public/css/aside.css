@@ -10,40 +10,44 @@
     --circle_bg_color: #cc9600;
 }
 
-aside{
-    width: 80px;
+aside {
+    width: 100%; /* Define a largura da barra lateral para ocupar toda a largura disponível */
+    max-width: 5vmax; /* Define a largura máxima da barra lateral */
+    min-width: 30px;
 }
 
-.container{
-    width: 10%;
+.container {
+    width: 90%; /* Define a largura do conteúdo principal */
+    margin-left: 10%; /* Define a margem à esquerda para dar espaço à barra lateral */
 }
 
 .barra-esquerda {
     background-color: var(--left_bar_bg_color);
-    max-width: 80px;
+   /* Faça a barra lateral ocupar toda a largura do elemento pai (no caso, o 'aside') */
 }
 
 .material-symbols-outlined {
     color: var(--symbols_color);
-    font-size: 40px;
+    font-size: 2vmax; 
     background-color: var(--circle_bg_color);
-    border-radius: 50px;
-    padding: 7px;
+    border-radius: 50%;
+    padding: 0.5rem; /* Use 'vw' para definir o preenchimento responsivo */
     cursor: pointer;
     transition: 0.3s;
 }
-.material-symbols-outlined:hover{
+
+.material-symbols-outlined:hover {
     transform: scale(1.2);
 }
 
 .ponta {
-    width: 4%;
+    width: 10%; /* Defina uma largura relativa para a ponta */
 }
 
 .triangulo-para-baixo {
     width: 0;
     height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 25px solid var(--left_bar_bg_color);
+    border-left: 2.6vmax solid transparent; /* Use 'vw' para tornar a borda responsiva */
+    border-right: 2.5vmax solid transparent; /* Use 'vw' para tornar a borda responsiva */
+    border-top: 1.5vmax solid var(--left_bar_bg_color); /* Use 'vw' para tornar a borda responsiva */
 }

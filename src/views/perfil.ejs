@@ -68,10 +68,11 @@
               </h5>
             </li>
             <li class="nav-item nav-item-header">
-                <a
-                  href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
-                    <img src="img/<%=encontrarPessoa.Foto%>" style="height: 60px; width: 60px; border-radius:50%; padding:2px; background-color:white"> 
-                </a>
+              <a
+                href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
+                <img src="img/<%=encontrarPessoa.Foto%>"
+                  style="height: 60px; width: 60px; border-radius:50%; padding:2px; background-color:white">
+              </a>
             </li>
           </ul>
         </div>
@@ -126,68 +127,69 @@
     </aside>
 
     <article>
-      <h1 class="mt-5 d-flex justify-content-center our-text-color">
+      <h1 class="texto-g mt-5 d-flex justify-content-center our-text-color">
         <%=encontrarPessoa.Nome %>
       </h1>
 
       <form action="/perfil" method="post" enctype="multipart/form-data">
-        <section class="mt-5 justify-content-center">
-          <div class="card mb-3" style="width: 40%; background-color: rgb(225, 229, 235);">
-            <div class="g-0 d-flex gap-5" style="justify-content: center;">
+        <section class=" justify-content-center">
+          <div class="caixa-perfil d-flex flex-row align-items-center gap-2 card mb-3 " style=" background-color: rgb(255, 255, 255); justify-content:center; flex-wrap: wrap;">
+            
 
 
 
-              <div class="d-flex flex-column align-items-center justify-content-center">
+              <div class="m-2 d-flex flex-column align-items-center justify-content-center">
                 <img src="img/<%=encontrarPessoa.Foto%>" class=" foto-user card-img-top " id="imgFoto"
-                  style="border-radius: 50%; ">
+                  style="border-radius: 50%;">
                 <input class="mb-4 " type="file" id="flImage" name="foto" accept="image/*" style="display:none;"
                   disabled>
               </div>
 
-              <div class="col-md-8" style="width: 30%;">
-                <div class="card" style="border-style: none; background-color: rgb(225, 229, 235);">
-                  <div class="card-body">
-                    <div class="d-flex">
-                      <ul style="padding: 0;">
-                        <li class="list-group-item"><b style="color: rgb(16, 136, 136);">CPF</b></li>
-                        <li class="list-group-item">
-                          <input name="CPF" type="number" style="border: none; background-color: transparent;"
-                            value="<%=encontrarPessoa.CPF%>" class="input-inacessivel campoEditavel" readonly>
 
-                        </li>
-                        <li class="list-group-item pt-3"><b style="color: rgb(16, 136, 136);">Data de nascimento</b>
-                        </li>
-                        <li class="list-group-item">
-                          <input name="DataNascimento" type="text" style="border: none; background-color: transparent;"
-                            value="<%=encontrarPessoa.DataNascimento %>" class="input-inacessivel campoEditavel"
-                            readonly>
+              <div class="m-3">
 
-                        </li>
-                        <% if (funcionario==0) {%>
-                          <li class="list-group-item pt-3"><b style="color: rgb(16, 136, 136);">Periodo</b></li>
-                          <li class="list-group-item">
-                            <%=turmaEncontrada.Periodo %>
-                          </li>
-                          <% } %>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <ul  style="padding: 0px;">
+                  <li class="list-group-item texto-pp"><b style="color: rgb(16, 136, 136);">CPF</b></li>
+                  <li class="list-group-item">
+                    <input name="CPF" type="number" style="border: none; background-color: transparent;"
+                      value="<%=encontrarPessoa.CPF%>" class="input-inacessivel campoEditavel" readonly
+                      style="font-size:1rem;">
+
+                  </li>
+                  <li class="list-group-item pt-3 texto-pp"><b style="color: rgb(16, 136, 136);">Data de
+                      nascimento</b>
+                  </li>
+                  <li class="list-group-item">
+                    <input name="DataNascimento" type="text" style="border: none; background-color: transparent;"
+                      value="<%=encontrarPessoa.DataNascimento %>" class="input-inacessivel campoEditavel" readonly>
+
+                  </li>
+                  <% if (funcionario==0) {%>
+                    <li class="list-group-item pt-3 texto-pp"><b style="color: rgb(16, 136, 136);">Periodo</b>
+                    </li>
+                    <li class="list-group-item texto">
+                      <%=turmaEncontrada.Periodo %>
+                    </li>
+                    <% } %>
+                </ul>
+
               </div>
+
             </div>
+          
         </section>
 
         <section class="gap-3" style="flex-direction: column;">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h4>Filiação</h4>
+          <div class="card" flex-wrap: wrap">
+            <div class="card-body" style="flex-wrap: wrap;">
+              <h4 class="texto-m">Filiação</h4>
               <hr>
 
-              <div class="d-flex">
-                <div style="width: 48%;">
+              <div class="d-flex caixa gap-2">
+                <div class="caixa-p">
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                      <h5>Nome</h5>
+                      <h5 class="texto-p">Nome</h5>
                     </li>
                   </ul>
 
@@ -205,36 +207,36 @@
                   </ul>
                 </div>
 
-                <div style="width: 48%; margin-left: 70px;">
+                <div class="caixa-p">
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                      <h5>Tipo de relacionamento</h5>
+                      <h5 class="texto-p">Tipo de relacionamento</h5>
                     </li>
                   </ul>
 
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Mãe</li>
-                    <li class="list-group-item">Pai</li>
+                    <li class="list-group-item texto">Mãe</li>
+                    <li class="list-group-item texto">Pai</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="card" style="width: 100%;">
+          <div class="card">
             <div class="card-body">
-              <h4>Contato</h4>
+              <h4 class="texto-m">Contato</h4>
               <hr>
 
               <div class="d-flex">
                 <div style="width: 100%;">
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">E-mail:
+                    <li class="list-group-item texto-pp">E-mail:
                       <input name="Email" type="text" style="border: none; background-color: transparent;;"
                         value="<%=encontrarPessoa.Email %>" class="input-inacessivel campoEditavel" readonly>
 
                     </li>
-                    <li class="list-group-item">Telefone:
+                    <li class="list-group-item texto-pp">Telefone:
                       <input name="Telefone" type="text" style="border: none; background-color: transparent;;"
                         value="<%=encontrarPessoa.Telefone %>" class="input-inacessivel campoEditavel" readonly>
 
@@ -245,61 +247,61 @@
             </div>
           </div>
 
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h4>Endereço</h4>
-              <hr>
+          <div class="card" >
+            <div class=" card-body">
+            <h4 class="texto-m">Endereço</h4>
+            <hr>
 
-              <div class="d-flex">
-                <div style="width: 48%;">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">CEP:
-                      <input name="CEP" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.CEP%>" class="input-inacessivel campoEditavel" readonly>
+            <div class="d-flex caixa gap-2">
+              <div class="caixa-p">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item texto-pp">CEP:
+                    <input name="CEP" type="text" style="border: none; background-color: transparent;;"
+                      value="<%=encontrarPessoa.CEP%>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                    <li class="list-group-item">Número:
-                      <input name="Numero" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.Numero%>" class="input-inacessivel campoEditavel" readonly>
+                  </li>
+                  <li class="list-group-item texto-pp">Número:
+                    <input name="Numero" type="text" style="border: none; background-color: transparent;;"
+                      value="<%=encontrarPessoa.Numero%>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                    <li class="list-group-item">Cidade:
-                      <input name="Cidade" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.Cidade%>" class="input-inacessivel campoEditavel" readonly>
+                  </li>
+                  <li class="list-group-item texto-pp">Cidade:
+                    <input name="Cidade" type="text" style="border: none; background-color: transparent;;"
+                      value="<%=encontrarPessoa.Cidade%>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                    <li class="list-group-item">Complemento:
-                      <input name="Complemento" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.Complemento%>" class="input-inacessivel campoEditavel" readonly>
+                  </li>
+                  <li class="list-group-item texto-pp">Complemento:
+                    <input name="Complemento" type="text" style="border: none; background-color: transparent;"
+                      value="<%=encontrarPessoa.Complemento%>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                  </ul>
-                </div>
+                  </li>
+                </ul>
+              </div>
 
-                <div style="width: 48%; margin-left: 70px;">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Rua:
-                      <input name="Rua" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.Rua %>" class="input-inacessivel campoEditavel" readonly>
+              <div class="caixa-p">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item texto-pp">Rua:
+                    <input name="Rua" type="text" style="border: none; background-color: transparent;;"
+                      value="<%=encontrarPessoa.Rua %>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                    <li class="list-group-item">Bairro:
-                      <input name="Bairro" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.Bairro %>" class="input-inacessivel campoEditavel" readonly>
+                  </li>
+                  <li class="list-group-item texto-pp">Bairro:
+                    <input name="Bairro" type="text" style="border: none; background-color: transparent;;"
+                      value="<%=encontrarPessoa.Bairro %>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                    <li class="list-group-item">Estado:
-                      <input name="Estado" type="text" style="border: none; background-color: transparent;;"
-                        value="<%=encontrarPessoa.Estado %>" class="input-inacessivel campoEditavel" readonly>
+                  </li>
+                  <li class="list-group-item texto-pp">Estado:
+                    <input name="Estado" type="text" style="border: none; background-color: transparent;;"
+                      value="<%=encontrarPessoa.Estado %>" class="input-inacessivel campoEditavel" readonly>
 
-                    </li>
-                  </ul>
-                  <input name="id" type="number" style="display:none;" value="<%=encontrarPessoa.IDPessoa %>">
-                  <input name="selec" type="number" style="display:none;" value="<%=selecionadoMM %>">
-                  <input name="func" type="number" style="display:none;" value="<%=funcionario%>">
-                </div>
+                  </li>
+                </ul>
+                <input name="id" type="number" style="display:none;" value="<%=encontrarPessoa.IDPessoa %>">
+                <input name="selec" type="number" style="display:none;" value="<%=selecionadoMM %>">
+                <input name="func" type="number" style="display:none;" value="<%=funcionario%>">
               </div>
             </div>
+          </div>
           </div>
           <div class="d-flex gap-3 justify-content-end">
             <button style="display: none;" onclick="salvarEdicao()" type="post" class="botao-salvar btn"
@@ -312,7 +314,7 @@
     </article>
   </main>
 
-  <footer ></footer>
+  <footer></footer>
 </body>
 
 </html>
