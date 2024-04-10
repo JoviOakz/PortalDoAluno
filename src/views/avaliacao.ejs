@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Curricular</title>
+    <title>Avaliação</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -65,12 +65,8 @@
                         <li class="nav-item ps-1">
                             <a
                                 href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white"
-                                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                    <path fill-rule="evenodd"
-                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                                </svg>
+                                <img src="img/<%=encontrarPessoa.Foto%>"
+                                    style="height: 60px; width: 60px; border-radius:50%; padding:2px;">
                             </a>
                         </li>
                     </ul>
@@ -127,6 +123,10 @@
 
         <article>
             <section>
+                <div class="d-flex justify-content-start align-items-end">
+                    <h1 class="our-text-color m-0">Avaliações</h1>
+                </div>
+
                 <form action="" method="post" class="mt-5">
                     <select class="form-select" onchange="this.form.submit()" name="nome"
                         aria-label="Default select example" style="width: 220px;">
@@ -144,8 +144,12 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/logo_senai.png" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text h5"><%=encontrarMateria.Nome %></p>
-                                <p class="card-text"><%=encontrarMateria.Descricao %></p>
+                                <p class="card-text h5">
+                                    Avaliação 1
+                                </p>
+                                <p class="card-text">
+                                    <%=encontrarMateria.Descricao %>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -153,8 +157,12 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/logo_senai.png" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text h5"><%=encontrarMateria.Nome %></p>
-                                <p class="card-text"><%=encontrarMateria.Descricao %></p>
+                                <p class="card-text h5">
+                                    Avaliação 2
+                                </p>
+                                <p class="card-text">
+                                    <%=encontrarMateria.Descricao %>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -162,8 +170,12 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/logo_senai.png" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text h5"><%=encontrarMateria.Nome %></p>
-                                <p class="card-text"><%=encontrarMateria.Descricao %></p>
+                                <p class="card-text h5">
+                                    Avaliação 3
+                                </p>
+                                <p class="card-text">
+                                    <%=encontrarMateria.Descricao %>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -171,8 +183,12 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/logo_senai.png" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text h5"><%=encontrarMateria.Nome %></p>
-                                <p class="card-text"><%=encontrarMateria.Descricao %></p>
+                                <p class="card-text h5">
+                                    Avaliação 4
+                                </p>
+                                <p class="card-text">
+                                    <%=encontrarMateria.Descricao %>
+                                </p>
                             </div>
                         </div>
                     </div>

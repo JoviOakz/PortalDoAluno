@@ -54,6 +54,7 @@ form {
     display: flex;
     flex-direction: column;
     height: 350px;
+    width: 470px;
     gap: 10px;
     padding-left: 2em;
     padding-right: 2em;
@@ -75,7 +76,7 @@ form {
 }
 
 .row {
-    width: 25%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -85,7 +86,8 @@ form {
 }
 
 .form-control {
-    width: 400px;
+    max-width: 400px;
+    min-width: 100px;
 }
 
 .form-select {
@@ -94,4 +96,10 @@ form {
 
 #error {
     color: var(--error_color);
+}
+
+@media ((min-width: 320px) and (max-width: 425px)){
+    form{
+        max-width: 300px;
+    }
 }

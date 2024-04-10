@@ -26,7 +26,7 @@
 
 <body>
     <header class="d-flex align-items-center justify-content-center">
-        <nav class="navbar navbar-expand-lg poppins-bold">
+        <nav class="navbar navbar-expand poppins-bold">
             <div class="container-fluid ">
                 <div>
                     <label class="switch">
@@ -49,7 +49,7 @@
                 <%if(funcionario == '0'){%>
                     <% if(matriculasEncontradas.length> 0) {%>
                         <% for(let i=0; i< matriculasEncontradas.length; i++) {%>
-                            <div class="card mb-3 field align-items-start" style="width: 30rem;">
+                            <div class="card mb-3 field align-items-start">
                                 <div class="d-flex align-items-center">
                                     <div class="form-check">
                                         <input class="form-check-input" value='<%=matriculasEncontradas[i].IDMatricula%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' type="radio" name="flexRadioDefault" id="flexRadioDefault<%= i + 1 %>" required>
@@ -71,7 +71,7 @@
                     <% if(materiasEncontradas.length> 0) {%>
                         <% for(let i=0; i< materiasEncontradas.length; i++) {%>
         
-                            <div class="card mb-3 field align-items-start" style="width: 30rem;">
+                            <div class="card mb-3 field align-items-start">
                                 <div class="d-flex align-items-center">
                                     <div class="form-check">
                                         <input class="form-check-input" value='<%=materiasEncontradas[i].IDMateria%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' name="flexRadioDefault" type="radio" id="flexRadioDefault<%= i + 1 %>" required>

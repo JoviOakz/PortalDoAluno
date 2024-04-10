@@ -47,7 +47,6 @@ article {
 
 section {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,6 +66,11 @@ form {
     border: 3px solid var(--form_border_color);
     border-radius: 25px;
     transition: .4s ease-in-out;
+}
+
+#form-select{
+    height: 850px;
+    width: 800px;
 }
 
 
@@ -101,6 +105,10 @@ form {
     transition: .4s ease-in-out;
 }
 
+#form-delete{
+    width: 650px;
+}
+
 button,
 button:focus {
   font-size: 17px;
@@ -119,4 +127,49 @@ button:focus {
 button:active {
   transform: translate(0, 0);
   border-bottom: 2px solid var(--btn_press_color);
+}
+
+#button-cad{
+    margin: 0;
+}
+
+@media (max-width: 833px){
+    article{
+        height: 920px;
+    }
+
+    #form-select{
+        height: 880px;
+    }
+}
+
+@media (max-width: 767px){
+    article{
+        height: 1950px;
+    }
+
+    #form-select{
+        height: 1930px;
+    }
+}
+
+@media (max-width: 700px){
+    #form-delete{
+        width: 450px;
+    }
+}
+
+@media ((min-width: 320px) and (max-width: 425px)){
+    #form-select{
+        width: 270px;
+        height: 1940px;
+    }
+    
+    #button-cad{
+        margin-left: 50px;
+    }
+
+    #form-delete{
+        width: 300px;
+    }
 }
