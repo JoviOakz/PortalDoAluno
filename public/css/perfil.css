@@ -43,8 +43,8 @@ section {
 }
 
 
-button,
-button:focus {
+.btn,
+.btn:focus {
     width: 200px;
   font-size: 17px;
   padding: 10px 25px;
@@ -59,7 +59,7 @@ button:focus {
   transition-timing-function: linear;
 }
 
-button:active {
+.btn:active {
   transform: translate(0, 0);
   border-bottom: 2px solid var(--btn_press_color);
 }

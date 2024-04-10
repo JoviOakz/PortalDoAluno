@@ -1,5 +1,19 @@
+:root {
+    --card_color:#f5f5f5;
+    --text_color_sm: #808080;
+    --border_color: #0C9ABE;
+    --box_shadow: rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode {
+    --card_color: #8f8f8f ;
+    --text_color_sm: #303030;
+    --border_color: #02c0f0;
+    --box_shadow: rgba(255, 255, 255, 0.25);
+}
+
 article {
-    width: 80%;
+    width: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -11,6 +25,7 @@ section {
     justify-content: space-evenly;
 }
 
+
 .row {
     display: flex;
     justify-content: center;
@@ -20,7 +35,7 @@ section {
     width: 190px;
     height: 254px;
     border-radius: 20px;
-    background: #f5f5f5;
+    background: var(--card_color);
     position: relative;
     padding: 1.8rem;
     border: 2px solid #c3c6ce;
@@ -28,12 +43,17 @@ section {
     overflow: visible;
 }
 
+b{
+    color: var(--text_color-sm)
+}
+
 .card-details {
-    color: black;
+    color: var(--text_color);
     height: 100%;
     gap: .5em;
     display: grid;
     place-content: center;
+    transition: .4s ease-in-out;
 }
 
 .card-button {
@@ -41,7 +61,7 @@ section {
     width: 60%;
     border-radius: 1rem;
     border: none;
-    background-color: #0C9ABE;
+    background-color: var(--border_color);
     color: #fff;
     font-size: 1rem;
     padding: .5rem 1rem;
@@ -54,6 +74,7 @@ section {
 
 .text-body {
     color: rgb(134, 134, 134);
+    transition: .4s ease-in-out;
 }
 
 /*Text*/
@@ -64,11 +85,12 @@ section {
 
 /*Hover*/
 .card:hover {
-    border-color: #0C9ABE;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    border-color: var(--border_color);
+    box-shadow: 0 4px 18px 0 ;
 }
 
 .card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
 }
+
