@@ -1,12 +1,12 @@
 :root {
-    
+
     --btn_border_color: #c07512;
     --btn_bg_color: #f08f11;
     --btn_bg_color1: #fd9103;
     --btn_press_color: #b46907;
     --shadow_color: #cf7e13;
 
-    --card_color:#f5f5f5;
+    --card_color: #f5f5f5;
     --text_color_sm: #808080;
     --border_color: #0C9ABE;
     --box_shadow: rgba(0, 0, 0, 0.25);
@@ -24,30 +24,35 @@
     --field_bg_color: #171717;
     --field_shadow_color: #050505;
 
-    --card_color: #8f8f8f ;
+    --card_color: #8f8f8f;
     --text_color_sm: #303030;
     --border_color: #02c0f0;
     --box_shadow: rgba(255, 255, 255, 0.25);
 }
 
 html {
-    font-size: 16px; /* Define o tamanho de fonte padrão para 16 pixels */
+    font-size: 16px;
+    /* Define o tamanho de fonte padrão para 16 pixels */
 }
-  
-.texto,input{
+
+.texto,
+input {
     font-size: 1vmax;
 }
 
-.texto-g{
+.texto-g {
     font-size: 2vmax;
 }
-.texto-m{
+
+.texto-m {
     font-size: 1.4vmax;
 }
-.texto-p{
+
+.texto-p {
     font-size: 1.2vmax;
 }
-.texto-pp{
+
+.texto-pp {
     font-size: 1vmax;
 }
 
@@ -62,7 +67,7 @@ section {
     align-items: center;
 }
 
-.foto-user{
+.foto-user {
     max-width: 180px;
     max-height: 180px;
 }
@@ -71,21 +76,23 @@ section {
     pointer-events: none;
 }
 
-.card{
+.card {
     width: 70%;
 }
 
-.caixa-perfil{
+.caixa-perfil {
     max-width: 40vmax;
 }
 
-.caixa{
+.caixa {
     flex-wrap: wrap;
 }
-.caixa-p{
+
+.caixa-p {
     width: 30vmax;
 }
-.caixa-pp{
+
+.caixa-pp {
     width: 17vmax;
 }
 
@@ -94,27 +101,27 @@ section {
 .btn,
 .btn:focus {
     width: 200px;
-  font-size: 17px;
-  padding: 10px 25px;
-  border-radius: 0.7rem;
-  background-image: linear-gradient(var(--btn_bg_color),var(--btn_bg_color1));
-  border: 2px solid var(--btn_border_color);
-  border-bottom: 5px solid var(--btn_border_color);
-  box-shadow: 0px 1px 6px 0px var(--shadow_color);
-  transform: translate(0, -3px);
-  cursor: pointer;
-  transition: 0.2s;
-  transition-timing-function: linear;
+    font-size: 17px;
+    padding: 10px 25px;
+    border-radius: 0.7rem;
+    background-image: linear-gradient(var(--btn_bg_color), var(--btn_bg_color1));
+    border: 2px solid var(--btn_border_color);
+    border-bottom: 5px solid var(--btn_border_color);
+    box-shadow: 0px 1px 6px 0px var(--shadow_color);
+    transform: translate(0, -3px);
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: linear;
 }
 
 .btn:active {
-  transform: translate(0, 0);
-  border-bottom: 2px solid var(--btn_press_color);
+    transform: translate(0, 0);
+    border-bottom: 2px solid var(--btn_press_color);
 }
 
 
-@media (min-width: 400px){
-    .contato{
+@media (min-width: 400px) {
+    .contato {
         width: 20vmax;
     }
 }
