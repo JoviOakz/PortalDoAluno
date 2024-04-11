@@ -1,0 +1,103 @@
+:root {
+    --main_bg_color: #48BEE6;
+    --form_bg_color: #ffcc8a;
+    --form_border_color: #cf7e13;
+    --btn_border_color: #c07512;
+    --btn_bg_color: #f08f11;
+    --btn_bg_color1: #fd9103;
+    --btn_press_color: #b46907;
+    --error_color: #ff0000;
+    --text_color: #000000;
+    --shadow_color: #cf7e13;
+    --field_bg_color: #ca9f67;
+    --field_shadow_color: #bf8e4d;
+}
+
+.dark-mode {
+    --main_bg_color: #2e2c2c;
+    --form_bg_color: #222222;
+    --form_border_color: #ff7b00;
+    --btn_bg_color: #ff7b00;
+    --btn_press_color: #ff9735;
+    --error_color: #ff5555;
+    --text_color: #ffffff;
+    --shadow_color: #ff7b00;
+    --field_bg_color: #171717;
+    --field_shadow_color: #050505;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: var(--main_bg_color);
+    transition: .4s ease-in-out;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    background-color: var(--form_bg_color);
+    border: 3px solid var(--form_border_color);
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+}
+
+.form-control {
+    min-width: 100px;
+    max-width: 600px;
+}
+
+#imgFoto {
+    margin-top: 20px;
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    object-fit: cover;
+
+}
+
+.foto-user {
+    background-color: #f08f11;
+}
+
+
+.shadow {
+    filter: drop-shadow(10px 7px 10px var(--shadow_color));
+}
+
+button,
+button:focus {
+    width: 200px;
+    font-size: 17px;
+    padding: 10px 25px;
+    border-radius: 0.7rem;
+    background-image: linear-gradient(var(--btn_bg_color), var(--btn_bg_color1));
+    border: 2px solid var(--btn_border_color);
+    border-bottom: 5px solid var(--btn_border_color);
+    box-shadow: 0px 1px 6px 0px var(--shadow_color);
+    transform: translate(0, -3px);
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: linear;
+}
+
+button:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid var(--btn_press_color);
+}
+
+.btn {
+    background-color: var(--btn_bg_color);
+    border-color: var(--btn_press_color);
+}
+
+.btn:hover {
+    background-color: var(--btn_press_color);
+    border-color: var(--btn_press_color);
+}

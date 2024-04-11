@@ -19,16 +19,18 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/botao.css">
+    <link rel="stylesheet" href="css/input.css">
 
 </head>
 
 <body>
     <header class="d-flex align-items-center justify-content-center">
-        <nav class="navbar navbar-expand-lg poppins-bold">
-            <div class="container-fluid ">
+        <nav class="navbar navbar-expand poppins-bold">
+            <div class="container-fluid">
                 <div>
                     <label class="switch">
-                        <input type="checkbox" id="colorSwitch">
+                        <input type="checkbox" id="darkModeSwitch" onchange="toggleDarkMode()">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -42,29 +44,38 @@
     <main>
         <article>
             <section>
-                <form class="row g-3 needs-validation" action="/" method="post">
-                    <a href="/home">
-                        <h2>Portal do Aluno</h2>
-                    </a>
-                    <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label">Usuário</label>
-                        <input type="text" name="loginn" value="" class="form-control" id="validationCustom01" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label">Senha</label>
-                        <input type="password" name="senhaa" value="" class="form-control" id="validationCustom02"
-                            required>
-                    </div>
-                    <div class="col-12 d-flex gap-5 align-items-center pt-2">
-                        <button class="btn btn-primary " type="post"><b>Acessar</b></button>
-                        <h5 cla id="error">
-                            <%= resultado==false ? 'Senha ou login incorreto!' : '' %>
-                        </h5>
+                <form class="shadow our-text-color" action="/" method="post">
+                    <h2 class="d-flex justify-content-center align-items-center mt-2">Portal do Aluno</h2>
+                    <div class="row">
+                        <div class="col-12 centro">
+                            <label class="form-label our-text-color" style="padding-left: 10px;">Usuário</label>
+                            <div class="mb-4  wrap">
+                                <input type="text" name="loginn" value="" class="form-control field"
+                                    id="validationCustom01" required>
+                            </div>
+                        </div>
+
+                        <div class="col-12 centro">
+                            <label class="form-label our-text-color" style="padding-left: 10px;">Senha</label>
+                            <div class="mb-4 wrap">
+                                <input type="password" name="senhaa" value="" class="form-control field"
+                                    id="validationCustom02" required>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex gap-5 align-items-center pt-2">
+                            <button class="wrap mt-2" style="width: 150px; color: white; font-weight: 500; margin: 0px;"
+                                type="post"><b>Acessar</b></button>
+                            <h5 cla id="error">
+                                <%= resultado==false ? 'Senha ou login incorreto!' : '' %>
+                            </h5>
+                        </div>
                     </div>
                 </form>
             </section>
         </article>
     </main>
+    
 </body>
 
 </html>

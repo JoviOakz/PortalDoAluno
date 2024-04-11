@@ -1,14 +1,14 @@
 module.exports = {
-    async pagHome(req, res) {
-        res.render('../views/home');
-    },
     async pagLogin(req, res) {
         res.render('../views/login', {resultado: true});
     },
-    async pagGradeCurricular(req, res) {
-        res.render('../views/gradeCurricular');
+    async pagSelecaoCadastro(req, res){
+        res.render('../views/selecaoCadastro')
     },
-    async pagBoletos(req, res) {
-        res.render('../views/boletos');
+    async pagFormsCadastro(req, res){
+        res.render('../views/formsCadastro')
+    },
+    async pagDeleteAluno(req, res){
+        res.render('../views/deleteAluno')
     }
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- JAVASCRIPT -->
+    <script defer src="js/switch_dark_mode.js"></script>
+    <script defer src="js/selecionar-materia-curso.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/matricula.css">
+    <link rel="stylesheet" href="css/botao.css">
+
+</head>
+
+<body>
+    <header class="d-flex align-items-center justify-content-center">
+        <nav class="navbar navbar-expand poppins-bold">
+            <div class="container-fluid ">
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeSwitch" onchange="toggleDarkMode()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <img class="logo" src="img/logo.png">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex flex-column justify-content-center align-items-center">
+        <article class="d-flex flex-column justify-content-center align-items-center gap-3">
+            <h5 class="nome-aluno poppins" name="aluno"><% if(funcionario == '0') { %>Aluno(a)<b><%=nome%></b><% } else { %>Professor(a)<b><%=nome%></b><% } %></b></h5>
+
+            <form action="/selecionar" method="post">
+                <%if(funcionario == '0'){%>
+                    <% if(matriculasEncontradas.length> 0) {%>
+                        <% for(let i=0; i< matriculasEncontradas.length; i++) {%>
+                            <div class="card mb-3 field align-items-start">
+                                <div class="d-flex align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" value='<%=matriculasEncontradas[i].IDMatricula%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' type="radio" name="flexRadioDefault" id="flexRadioDefault<%= i + 1 %>" required>
+                                        <label class="form-check-label" for="flexRadioDefault<%= i + 1 %>">
+                                            
+                                            ID: <%= matriculasEncontradas[i].IDCurso %> <br>
+                                            Curso: <%= matriculasEncontradas[i].NomeCurso %> <br>
+                                            <%= matriculasEncontradas[i].PeriodoTurma %>° Período
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <% }%>
+                    <% } else {%>
+                        <h4 class="texto-caixa">Nenhuma matrícula encontrada</h4>
+                    <% } %>
+                <% } else if (funcionario == '1'){%>
+                    <% if(materiasEncontradas.length> 0) {%>
+                        <% for(let i=0; i< materiasEncontradas.length; i++) {%>
+        
+                            <div class="card mb-3 field align-items-start">
+                                <div class="d-flex align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" value='<%=materiasEncontradas[i].IDMateria%>=<%=pessoaEncontrada.IDPessoa%>=<%=funcionario%>' name="flexRadioDefault" type="radio" id="flexRadioDefault<%= i + 1 %>" required>
+                                        <label class="form-check-label" for="flexRadioDefault<%= i + 1 %>"> 
+                                            Materia: <%= materiasEncontradas[i].Nome%> <br>
+                                            <%= materiasEncontradas[i].Data%>-feira
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }%>
+                    <% } else {%>
+                        <h4 class="texto-caixa">Nenhuma materia encontrada</h4>
+                    <% } %>
+                <% } %>
+
+                <button style="width: 150px; color: white;" type="submit">Redirecionar</button>
+            </form>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

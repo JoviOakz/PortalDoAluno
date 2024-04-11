@@ -23,17 +23,18 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/aside.css">
   <link rel="stylesheet" href="css/gradeCurricular.css">
+  <link rel="stylesheet" href="css/btn.css">
 
 </head>
 
 <body>
   <header class="d-flex align-items-center justify-content-center">
     <nav class="navbar navbar-expand-lg poppins-bold">
-      <div class="container-fluid ">
-        <img class="logo" src="img/logo.png">
-        <div>
+      <div class="container-fluid align-items-center justify-content-between">
+        <div class="d-flex align-items-center justify-content-center">
+          <img class="logo" src="img/logo.png">
           <label class="switch">
-            <input type="checkbox" id="colorSwitch">
+            <input type="checkbox" id="darkModeSwitch" onchange="toggleDarkMode()">
             <span class="slider"></span>
           </label>
         </div>
@@ -46,20 +47,31 @@
           </svg>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav pe-5 fs-6">
-            <li class="pe-5 nav-item pe-2  d-flex align-items-center ">
-              <h5 class="fs-6 m-0">Eng. de Software</h5>
+          <ul class="navbar-nav  fs-6 ">
+            <li class="pe-5 nav-item nav-item-header pe-2  d-flex align-items-center ">
+              <h5 class="fs-6 m-0" id="const-curso"
+                value="<% if (funcionario == 0) {%><%=encontrarMatricula.IDMatricula%><%} else if (funcionario == 1) {%><%=encontrarMateria.IDMateria %><% } %>">
+                <% if (funcionario==0) {%>
+                  <%= cursoEncontrado.Nome %>
+                    <%} else if (funcionario==1) {%>
+                      <%=encontrarMateria.Nome %>
+                        <% } %>
+              </h5>
             </li>
-            <li class="pe-5 nav-item ms-1 pe-1  d-flex align-items-center">
-              <h5 class="fs-6 m-0">Yasmin Trembulack</h5>
+            <li class="pe-5 nav-item nav-item-header pe-1  d-flex align-items-center">
+              <h5 class="fs-6 m-0" id="const-nome" value="<%=encontrarPessoa.IDPessoa%>">
+                <%= encontrarPessoa.Nome %>
+              </h5>
             </li>
-            <li class="nav-item ps-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white" class="bi bi-person-circle"
-                viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                <path fill-rule="evenodd"
-                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-              </svg>
+            <li class="nav-item nav-item-header pe-4">
+              <a
+                href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
+                <img src="img/<%=encontrarPessoa.Foto%>"
+                  style="height: 60px; width: 60px; border-radius:50%; padding:2px; background-color:white">
+              </a>
+            </li>
+            <li class="nav-item nav-item-header d-flex align-items-center pe-1" >
+              <a style="width: 50px; padding:0px;height:33px; color: black;" class="btn" href="/" role="button">Sair</a>
             </li>
           </ul>
         </div>
@@ -68,26 +80,37 @@
   </header>
 
   <main>
-    <aside class="container" style="float: left;">
+    <aside class="ms-2" style="float: left;">
       <ul class="barra-esquerda nav flex-column align-items-center pt-3 gap-3">
         <li class="nav-item justify-content-center">
           <span class="material-symbols-outlined">menu</span>
         </li>
         <li class="nav-item justify-content-center">
-          <a href=""><span class="material-symbols-outlined">newspaper</span></a>
+          <a
+            href="/news?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=news"><span
+              class="material-symbols-outlined">newspaper</span></a>
         </li>
         <li class="nav-item justify-content-center">
-          <span class="material-symbols-outlined">grid_view</span>
+          <% if (funcionario==0) {%>
+            <a
+              href="/gradeCurricular?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=gradeCurricular"><span
+                class="material-symbols-outlined">grid_view</span></a>
+            <% } else { %>
+              <a
+                href="/avaliacao?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=avaliacao"><span
+                  class="material-symbols-outlined">grid_view</span></a>
+              <% } %>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">school</span>
         </li>
         <li class="nav-item">
-          <a href=""><span class="material-symbols-outlined">face_4</span></a>
-
+          <span class="material-symbols-outlined">face_4</span>
         </li>
         <li class="nav-item">
-          <span class="material-symbols-outlined">request_quote</span>
+          <a
+            href="/boletos?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=boletos"><span
+              class="material-symbols-outlined">request_quote</span></a>
         </li>
         <li class="nav-item">
           <span class="material-symbols-outlined">bookmark</span>
@@ -103,7 +126,11 @@
     </aside>
 
     <article>
-      <section>
+      <section id="section_1">
+        <div class="d-flex justify-content-start align-items-end">
+          <h1 class="our-text-color m-0">Grade curricular</h1>
+        </div>
+
         <form action="" method="post" class="mt-5">
           <select class="form-select" onchange="this.form.submit()" name="nome" aria-label="Default select example"
             style="width: 220px;">
@@ -120,37 +147,33 @@
       </section>
 
       <section>
-        <div class="row row-cols-1 row-cols-md-4 g-4 m-0">
-          <div class="col card_style">
-            <div class="card" style="width: 18rem;">
-              <img src="img/logo_senai.png" class="card-img-top">
+        <div class="row row-cols-1 row-cols-md-4 g-4 m-0 caixa">
+          <div class="col card_style d-flex justify-content-center caixa-pp">
+            <div class="card">
               <div class="card-body">
                 <p class="card-text h5">Lógica de Programing</p>
                 <p class="card-text">Matéria super divertida uhul maneiro radical!!!!!!!!!! rock!!!</p>
               </div>
             </div>
           </div>
-          <div class="col card_style">
-            <div class="card" style="width: 18rem;">
-              <img src="img/logo_senai.png" class="card-img-top">
+          <div class="col card_style d-flex justify-content-center caixa-pp">
+            <div class="card">
               <div class="card-body">
                 <p class="card-text h5">Lógica de Programing</p>
                 <p class="card-text">Matéria super divertida uhul maneiro radical!!!!!!!!!! rock!!!</p>
               </div>
             </div>
           </div>
-          <div class="col card_style">
-            <div class="card" style="width: 18rem;">
-              <img src="img/logo_senai.png" class="card-img-top">
+          <div class="col card_style d-flex justify-content-center caixa-pp">
+            <div class="card">
               <div class="card-body">
                 <p class="card-text h5">Lógica de Programing</p>
                 <p class="card-text">Matéria super divertida uhul maneiro radical!!!!!!!!!! rock!!!</p>
               </div>
             </div>
           </div>
-          <div class="col card_style">
-            <div class="card" style="width: 18rem;">
-              <img src="img/logo_senai.png" class="card-img-top">
+          <div class="col card_style d-flex justify-content-center caixa-pp">
+            <div class="card">
               <div class="card-body">
                 <p class="card-text h5">Lógica de Programing</p>
                 <p class="card-text">Matéria super divertida uhul maneiro radical!!!!!!!!!! rock!!!</p>
@@ -161,6 +184,8 @@
       </section>
     </article>
   </main>
+  <footer></footer>
+
 </body>
 
 </html>

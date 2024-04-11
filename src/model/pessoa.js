@@ -14,6 +14,10 @@ const pessoa = database.define('Pessoa', {
         type: Sequelize.STRING(100),
         allowNull: false
     },
+    Sexo: {
+        type: Sequelize.STRING(30),
+        allowNull: false
+    },
     CPF: {
         type: Sequelize.STRING(15),
         allowNull: false
@@ -27,14 +31,57 @@ const pessoa = database.define('Pessoa', {
         allowNull: false 
     },
     Funcionario: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.INTEGER,
         allowNull: false 
     },
     Senha: {
         type: Sequelize.STRING(50),
         allowNull: false
+    },
+    Email:{
+        type: Sequelize.STRING(100),
+        allowNull: false
+    },
+    Telefone:{
+        type: Sequelize.STRING(20),
+        allowNull: true
+    },
+    CEP:{
+        type: Sequelize.STRING(15),
+        allowNull: false
+    },
+    Cidade:{
+        type: Sequelize.STRING(50),
+        allowNull: false
+    },
+    Estado:{
+        type: Sequelize.STRING(50),
+        allowNull: false
+    },
+    Bairro:{
+        type: Sequelize.STRING(30),
+        allowNull: false
+    },
+    Rua:{
+        type: Sequelize.STRING(100),
+        allowNull: false
+    },
+    Numero:{
+        type: Sequelize.STRING(10),
+        allowNull: false
+    },
+    Complemento:{
+        type: Sequelize.STRING(50),
+        allowNull: true
+    },
+    Mae:{
+        type: Sequelize.STRING(100),
+        allowNull: false
+    },
+    Pai:{
+        type: Sequelize.STRING(100),
+        allowNull: false
     }
-
 });
 
 module.exports = pessoa;

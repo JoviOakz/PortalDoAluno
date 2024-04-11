@@ -1,0 +1,248 @@
+:root {
+    
+    --btn_border_color: #c07512;
+    --btn_bg_color: #f08f11;
+    --btn_bg_color1: #fd9103;
+    --btn_press_color: #b46907;
+    --shadow_color: #cf7e13;
+
+    --card_color:#f5f5f5;
+    --text_color_sm: #808080;
+    --border_color: #0C9ABE;
+    --box_shadow: rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode {
+    --main_bg_color: #2e2c2c;
+    --form_bg_color: #222222;
+    --form_border_color: #ff7b00;
+    --btn_bg_color: #ff7b00;
+    --btn_press_color: #ff9735;
+    --error_color: #ff5555;
+    --text_color: #ffffff;
+    --shadow_color: #ff7b00;
+    --field_bg_color: #171717;
+    --field_shadow_color: #050505;
+
+    --card_color: #8f8f8f ;
+    --text_color_sm: #303030;
+    --border_color: #02c0f0;
+    --box_shadow: rgba(255, 255, 255, 0.25);
+}
+
+html {
+    font-size: 15px; /* Define o tamanho de fonte padrão para 16 pixels */
+}
+  
+.texto,input{
+    font-size: 1vmax;
+}
+
+.texto-g{
+    font-size: 2vmax;
+}
+.texto-m{
+    font-size: 1.4vmax;
+}
+.texto-p{
+    font-size: 1.2vmax;
+}
+.texto-pp{
+    font-size: 1vmax;
+}
+
+article {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+.foto-user{
+    width: 180px; /* Define a largura máxima da imagem como 100% do contêiner pai */
+    height: 180px;
+    object-fit: cover;
+}
+
+.input-inacessivel {
+    pointer-events: none;
+}
+
+.card{
+    width: 70%;
+}
+
+.caixa-perfil{
+    max-width: 40vmax;
+}
+
+.caixa{
+    flex-wrap: wrap;
+}
+.caixa-p{
+    width: 30vmax;
+}
+.caixa-pp{
+    width: 17vmax;
+}
+
+
+
+.btn,
+.btn:focus {
+    width: 200px;
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(var(--btn_bg_color),var(--btn_bg_color1));
+  border: 2px solid var(--btn_border_color);
+  border-bottom: 5px solid var(--btn_border_color);
+  box-shadow: 0px 1px 6px 0px var(--shadow_color);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
+.btn:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid var(--btn_press_color);
+}
+
+
+
+
+
+
+@media (min-width: 320px){
+   
+    .foto-user{
+        width: 150px; /* Define a largura máxima da imagem como 100% do contêiner pai */
+        height: 150px;
+        object-fit: cover;
+    }
+    .texto,input{
+        font-size: 4vmin;
+    }
+    
+    .texto-g{
+        font-size: 7vmin;
+    }
+    .texto-m{
+        font-size: 5vmin;
+    }
+    .texto-p{
+        font-size: 4.9vmin;
+    }
+    .texto-pp{
+        font-size: 4.9vmin;
+    }
+    .teste{
+        flex-direction: column;
+    }
+    .caixa-45{
+        width: 100%;
+    }
+}
+@media (min-width: 400px){
+    .contato{
+        width: 20vmax;
+    }
+    
+}
+
+
+@media (min-width: 768px){
+    .contato{
+        width: 25vmax;
+    }
+    
+    .foto-user{
+        width: 180px; /* Define a largura máxima da imagem como 100% do contêiner pai */
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .texto,input{
+        font-size: 3vmin;
+    }
+    
+    .texto-g{
+        font-size: 6vmin;
+    }
+    .texto-m{
+        font-size: 4vmin;
+    }
+    .texto-p{
+        font-size: 3vmin;
+    }
+    .texto-pp{
+        font-size: 3vmin;
+    }
+    .teste{
+        flex-direction: column;
+    }
+    .caixa-45{
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1024px){
+   
+
+    .texto,input{
+        font-size: 3vmin;
+    }
+    
+    .texto-g{
+        font-size: 6vmin;
+    }
+    .texto-m{
+        font-size: 4vmin;
+    }
+    .texto-p{
+        font-size: 3vmin;
+    }
+    .texto-pp{
+        font-size: 3vmin;
+    }
+    .teste{
+        flex-direction: row;
+    }
+    .caixa-45{
+        width: 45%;
+    }
+}
+
+@media (min-width: 1440px){
+   
+
+    .texto,input{
+        font-size: 3vmin;
+    }
+    
+    .texto-g{
+        font-size: 5vmin;
+    }
+    .texto-m{
+        font-size: 4vmin;
+    }
+    .texto-p{
+        font-size: 3vmin;
+    }
+    .texto-pp{
+        font-size: 3vmin;
+    }
+    .teste{
+        flex-direction: row;
+    }
+    .caixa-45{
+        width: 45%;
+    }
+}
+
