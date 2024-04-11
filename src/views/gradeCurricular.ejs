@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/aside.css">
   <link rel="stylesheet" href="css/gradeCurricular.css">
+  <link rel="stylesheet" href="css/btn.css">
 
 </head>
 
@@ -46,7 +47,7 @@
           </svg>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav pe-5 fs-6">
+          <ul class="navbar-nav  fs-6 ">
             <li class="pe-5 nav-item nav-item-header pe-2  d-flex align-items-center ">
               <h5 class="fs-6 m-0" id="const-curso"
                 value="<% if (funcionario == 0) {%><%=encontrarMatricula.IDMatricula%><%} else if (funcionario == 1) {%><%=encontrarMateria.IDMateria %><% } %>">
@@ -62,12 +63,15 @@
                 <%= encontrarPessoa.Nome %>
               </h5>
             </li>
-            <li class="nav-item nav-item-header">
+            <li class="nav-item nav-item-header pe-4">
               <a
                 href="/perfil?idPessoa=<%=idPessoa%>&selecionado=<%=selecionadoMM%>&funcionario=<%=funcionario%>&pagina=perfil">
                 <img src="img/<%=encontrarPessoa.Foto%>"
                   style="height: 60px; width: 60px; border-radius:50%; padding:2px; background-color:white">
               </a>
+            </li>
+            <li class="nav-item nav-item-header d-flex align-items-center pe-1" >
+              <a style="width: 50px; padding:0px;height:33px; color: black;" class="btn" href="/" role="button">Sair</a>
             </li>
           </ul>
         </div>

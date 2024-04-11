@@ -12,6 +12,7 @@
     --field_bg_color: #ca9f67;
     --field_shadow_color: #bf8e4d;
     --photo_text: #4e4e4e;
+    --img_backgrond:#fdfdfd;
 }
 
 .dark-mode {
@@ -26,6 +27,7 @@
     --field_bg_color: #171717;
     --field_shadow_color: #050505;
     --photo_text: #dad7d7;
+    --img_backgrond:#afafaf;
 }
 
 * {
@@ -88,7 +90,8 @@ form {
 
 } 
 .foto-user{
-    background-color: #f08f11; 
+    background-color: var(--img_backgrond); 
+    transition: .4s ease-in-out;
 }
 
 .photo-text{

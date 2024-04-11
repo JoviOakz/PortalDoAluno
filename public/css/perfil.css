@@ -31,8 +31,12 @@
 }
 
 html {
+<<<<<<< HEAD
     font-size: 16px;
     /* Define o tamanho de fonte padrão para 16 pixels */
+=======
+    font-size: 15px; /* Define o tamanho de fonte padrão para 16 pixels */
+>>>>>>> origin/branchYas
 }
 
 .texto,
@@ -67,9 +71,16 @@ section {
     align-items: center;
 }
 
+<<<<<<< HEAD
 .foto-user {
     max-width: 180px;
     max-height: 180px;
+=======
+.foto-user{
+    width: 180px; /* Define a largura máxima da imagem como 100% do contêiner pai */
+    height: 180px;
+    object-fit: cover;
+>>>>>>> origin/branchYas
 }
 
 .input-inacessivel {
@@ -120,8 +131,140 @@ section {
 }
 
 
+<<<<<<< HEAD
 @media (min-width: 400px) {
     .contato {
-        width: 20vmax;
+=======
+
+
+
+
+@media (min-width: 320px){
+   
+    .foto-user{
+        width: 150px; /* Define a largura máxima da imagem como 100% do contêiner pai */
+        height: 150px;
+        object-fit: cover;
+    }
+    .texto,input{
+        font-size: 4vmin;
+    }
+    
+    .texto-g{
+        font-size: 7vmin;
+    }
+    .texto-m{
+        font-size: 5vmin;
+    }
+    .texto-p{
+        font-size: 4.9vmin;
+    }
+    .texto-pp{
+        font-size: 4.9vmin;
+    }
+    .teste{
+        flex-direction: column;
+    }
+    .caixa-45{
+        width: 100%;
     }
 }
+@media (min-width: 400px){
+    .contato{
+>>>>>>> origin/branchYas
+        width: 20vmax;
+    }
+    
+}
+
+
+@media (min-width: 768px){
+    .contato{
+        width: 25vmax;
+    }
+    
+    .foto-user{
+        width: 180px; /* Define a largura máxima da imagem como 100% do contêiner pai */
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .texto,input{
+        font-size: 3vmin;
+    }
+    
+    .texto-g{
+        font-size: 6vmin;
+    }
+    .texto-m{
+        font-size: 4vmin;
+    }
+    .texto-p{
+        font-size: 3vmin;
+    }
+    .texto-pp{
+        font-size: 3vmin;
+    }
+    .teste{
+        flex-direction: column;
+    }
+    .caixa-45{
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1024px){
+   
+
+    .texto,input{
+        font-size: 3vmin;
+    }
+    
+    .texto-g{
+        font-size: 6vmin;
+    }
+    .texto-m{
+        font-size: 4vmin;
+    }
+    .texto-p{
+        font-size: 3vmin;
+    }
+    .texto-pp{
+        font-size: 3vmin;
+    }
+    .teste{
+        flex-direction: row;
+    }
+    .caixa-45{
+        width: 45%;
+    }
+}
+
+@media (min-width: 1440px){
+   
+
+    .texto,input{
+        font-size: 3vmin;
+    }
+    
+    .texto-g{
+        font-size: 5vmin;
+    }
+    .texto-m{
+        font-size: 4vmin;
+    }
+    .texto-p{
+        font-size: 3vmin;
+    }
+    .texto-pp{
+        font-size: 3vmin;
+    }
+    .teste{
+        flex-direction: row;
+    }
+    .caixa-45{
+        width: 45%;
+    }
+}
+
