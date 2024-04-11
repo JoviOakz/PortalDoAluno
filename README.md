@@ -12,7 +12,7 @@ Paleta de cores: https://color.adobe.com/pt/ProjetoWeb-color-theme-b869893f-142d
 	✔️ - Autorização de Acessor por tipo de usuario.
 	✔️ - CRUD - ✔️ Create, ✔️ Read, ✔️ Update, ✔️ Delete.
 	✔️ - Validação de formulários - implemnetar validação de entradas para evitar entradas inválidas.
-	❌ - Design Responsivo.
+	✔️ - Design Responsivo.
 	✔️ - Personalização do tema - dark mode, light mode.
 
 
